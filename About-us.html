@@ -4,22 +4,28 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="css/about-us.css">
-    <script src="js/main.js"></script>
 </head>
 
 <body>
     <nav class="navigation">
         <!--        Logo-->
-        <div class="logo"><button type="button" onclick="LinkHomepage()"><img src="image/homepage/BtheB.png" ></button>
+         <div class="logo">
+            <button type="button" onclick="LinkHomepage()">
+               <img src="image/homepage/logo.png" style="width: 100px; height:100px " >
+            </button>
         </div>
-
+ 
         <!--        menu-->
         <div class="contain-menu">
+            <div class="nav-mobile" onclick="OpenMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul id="menu">
                 <li>
                     <a href="homepage.html" class="active">HOME</a></li>
@@ -64,21 +70,50 @@
                 <li><a href="About Us.html">ABOUT US</a></li>
             </ul>
         </div>
+         <!--        right-->
+         <div class="right-elements">
+             <!--        search-->
+             <a href="#" class="search">
+                 <i class="fa fa-search"></i></a>
+             <!--        cart-->
+             <a href="cart.html" class="cart">
+                 <i class="fa fa-shopping-bag"></i></a>
+             <!--        user-->
+             <a href="#" class="user">
+                 <i class="fa fa-user"></i></a>
+         </div>
+     </nav> 
+    <section>
+        <div class="slidershow">
+			<div class="slides">
+				<input type="radio" name="bottom" id="bottom_1" checked>
+				<input type="radio" name="bottom" id="bottom_2">
+				<input type="radio" name="bottom" id="bottom_3">
+				<input type="radio" name="bottom" id="bottom_4">
+				<input type="radio" name="bottom" id="bottom_5">
+				<div class="slide s1">
+					<img src="image/AboutUs/banner.png">
+				</div>
+				<div class="slide">
+					<img src="image/AboutUs/banner1.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/AboutUs/banner2.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/AboutUs/banner3.jpg">
+				</div>
+			</div>
+			<div class="navigation1">
+				<label for="bottom_1" class="bar"></label>
+				<label for="bottom_2" class="bar"></label>
+				<label for="bottom_3" class="bar"></label>
+				<label for="bottom_4" class="bar"></label>
+			</div>
+		</div>
 
-        <!--        right-->
-        <div class="right-elements">
-            <!--        search-->
-            <a href="#" class="search">
-                <i class="fa fa-search"></i></a>
-            <!--        cart-->
-            <a href="cart.html" class="cart">
-                <i class="fa fa-shopping-bag"></i></a>
-            <!--        user-->
-            <a href="#" class="user">
-                <i class="fa fa-user"></i></a>
-        </div>
-    </nav>
-    <img src="image/About Us Image/banner_about_us.png" width="100%" height="800px" />
+    </section>
+    
     <section class="container">
 
         <div class="card1">
@@ -91,7 +126,7 @@
                 </div>
             </div>
             <div>
-                <img src="image/About Us Image/vision.png" width="500px" height="550px" />
+                <img style="margin-top:90px;" src="image/AboutUs/vision.png" width="500px" height="550px" />
             </div>
         </div>
 
@@ -101,20 +136,16 @@
     <section class="container2">
 
         <div>
-            <img src="image/About Us Image/teamwork1.jpg" width="705px" height="550px" />
+            <img src="image/AboutUs/misson.png" width="100%" height="550px" />
         </div>
         <div class="mission">
             <div class="tittle2">OUR MISSION</div>
             <div class="text2">
                 Our mission is what drives us to do everything possible to expand human potential. We do that by creating. Groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse.<br />
-
                 <br /> Groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse.
             </div>
         </div>
 
-        <div style="margin-top:-480px; margin-left:150px">
-            <img src="image/About Us Image/teamwork2.jpg" height="400px" width="690px" />
-        </div>
     </section>
 
     <section style="margin-top:40px">
@@ -127,36 +158,40 @@
         <div class="container3">
             <div class="info">
                 <img src="image/About Us Image/cong.png" /><br />
-                <span class="name">Thành Công</span>
+                <span class="name">Phương Thảo</span>
             </div>
 
             <div class="info">
                 <img src="image/About Us Image/thu.png" /><br />
-                <span class="name">Anh Thư</span>
+                <span class="name">Gia Hân</span>
             </div>
 
             <div class="info">
                 <img src="image/About Us Image/uyen.png" /><br />
-                <span class="name">Mỹ Uyên</span>
+                <span class="name">Thành Đạt</span>
             </div>
 
             <div class="info">
                 <img src="image/About Us Image/truc.png" /><br />
-                <span class="name">Thanh Trúc</span>
+                <span class="name">Văn Đạo</span>
             </div>
 
             <div class="info">
                 <img src="image/About Us Image/thang.png" /><br />
-                <span class="name">Quốc Thắng</span>
+                <span class="name">Quang Quyền</span>
+            </div>
+            <div class="info">
+                <img src="image/About Us Image/thang.png" /><br />
+                <span class="name">Tuấn An</span>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--    footer-->
     <section id="footer">
         <div class="footer-container">
 
             <!--logo-->
-            <div class="footer-logo-container"><button type="button"><img src="image/homepage/BtheB.png" width="62.9" height="21.7"></button>
+            <div class="footer-logo-container"><button type="button"><img src="image/homepage/logo.png" width="100%" height="100%"></button>
                 <!--text-->
                 <span>Copyright 2021 - @cairupbado</span>
                 <!--Social-->

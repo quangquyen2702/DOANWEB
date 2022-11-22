@@ -1,0 +1,27 @@
+@media (min-width: 320px) 
+{ .body
+    {
+       width: auto;
+       height: fit-content;
+    }
+    .container
+    {
+        width: auto;
+        height:fit-content ;
+    }
+    #table
+    {
+        width: auto;
+        height: fit-content;
+    }
+    #menu
+    {
+        width: auto;
+        height: fit-content;
+    }
+    .headline
+    {
+        width: auto;
+        height: fit-content;
+    }
+}

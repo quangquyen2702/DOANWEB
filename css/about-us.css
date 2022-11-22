@@ -5,7 +5,8 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 70px
+    margin-left: 70px;
+    margin-top: 1050px;
 }
 
 .card1 {
@@ -39,6 +40,7 @@ body {
     grid-template-columns: 1fr 1fr;
     background-color: #ffffff;
     width: 100%;
+    margin-top: 20px;
 }
 
 .mission {
@@ -76,7 +78,7 @@ body {
 
 .container3 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-top: 50px;
     padding: 0px 100px;
 }
@@ -94,3 +96,86 @@ body {
     color: #031824;
     font-size: 18px;
 }
+#banner
+{
+  width: 100%;
+  height:100%;
+  margin: 5px 5px 5px;
+    
+}
+.slidershow
+{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 47%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: -999;
+}
+
+.navigation1{
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+    margin-top: 1000px;
+}
+
+.bar{
+	width: 20px;
+	height: 20px;
+	border:2px solid #fff;
+	border-radius: 30px;
+	margin: 10px;
+	cursor: pointer;
+}
+
+.bar:hover{
+	background: #4380a3;
+	transition: 0.6s;
+	border:2px solid #031824;
+}
+
+
+input[name="bottom"]{
+	position: absolute;
+	visibility: hidden;
+}
+
+.slides{
+	width: 500%;
+	height: 100%;
+	display: flex;
+}
+
+.slide{
+	width: 20%;
+	transition: 0.6s;
+}
+
+.slide img{
+	width: 100%;
+	height: 100%;
+}
+
+#bottom_1:checked ~ .s1{
+	margin-left: 0;
+}
+#bottom_2:checked ~ .s1{
+	margin-left: -20%;
+}
+#bottom_3:checked ~ .s1{
+	margin-left: -40%;
+}
+#bottom_4:checked ~ .s1{
+	margin-left: -60%;
+}
+#footer
+{
+    background-color:#4380a3;
+}
+
+

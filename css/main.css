@@ -183,7 +183,8 @@ ul.dropdown_menu>li:hover>ul.submenu {
 }
 /*footer*/
 
-#footer {
+#footer 
+{
     background-color: #ededed;
     padding: 5% 10px;
     position: relative;
