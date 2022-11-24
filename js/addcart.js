@@ -1,3 +1,3 @@
-const btn = document.querySelectorAll("button")
+const btn = document.querySelector(".addcart")
 console.log(btn)
 

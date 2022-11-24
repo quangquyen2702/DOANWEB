@@ -173,9 +173,6 @@ input[name="bottom"]{
 #bottom_4:checked ~ .s1{
 	margin-left: -60%;
 }
-#footer
-{
-    background-color:#4380a3;
-}
+
 
 

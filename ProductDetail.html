@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <title>Product Detail</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/productdetail.css">
@@ -16,14 +16,20 @@
 </head>
 
 <body>
-    <!--    navigationbar-->
+    
     <nav class="navigation">
         <!--        Logo-->
-        <div class="logo"><button type="button" onclick="LinkHomepage()"><img src="image/homepage/logo.png" ></button>
+         <div class="logo">
+            <button type="button" onclick="LinkHomepage()">
+               <img src="image/homepage/logo.png" style="width: 100%; height:100% " >
+            </button>
         </div>
-
+ 
         <!--        menu-->
         <div class="contain-menu">
+            <div class="nav-mobile" onclick="OpenMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
             <ul id="menu">
                 <li>
                     <a href="homepage.html" class="active">HOME</a></li>
@@ -68,23 +74,19 @@
                 <li><a href="About Us.html">ABOUT US</a></li>
             </ul>
         </div>
-
-
-        <!--        right-->
-        <div class="right-elements">
-            <!--        search-->
-            <a href="#" class="search">
-                <i class="fa fa-search"></i></a>
-            <!--        cart-->
-            <a href="cart.html" class="cart">
-                <i class="fa fa-shopping-bag"></i></a>
-            <!--        user-->
-            <a href="#" class="user">
-                <i class="fa fa-user"></i></a>
-
-        </div>
-    </nav>
-
+         <!--        right-->
+         <div class="right-elements">
+             <!--        search-->
+             <a href="#" class="search">
+                 <i class="fa fa-search"></i></a>
+             <!--        cart-->
+             <a href="cart.html" class="cart">
+                 <i class="fa fa-shopping-bag"></i></a>
+             <!--        user-->
+             <a href="#" class="user">
+                 <i class="fa fa-user"></i></a>
+         </div>
+     </nav>
     <!--    navigation end-->
     <div class="prdetail-container">
         <div class="prdetail-top">
@@ -414,7 +416,7 @@
         <div class="footer-container">
 
             <!--logo-->
-            <div class="footer-logo-container"><button type="button"><img src="image/homepage/BtheB.png" width="62.9" height="21.7"></button>
+            <div class="footer-logo-container"><button type="button"><img src="image/homepage/logo.png" width="100dp" height="100dp"></button>
                 <!--text-->
                 <span>Copyright 2021 - @cairupbado</span>
                 <!--Social-->
@@ -472,6 +474,7 @@
         </div>
 
     </section>
+    <script src="js/addcart.js"></script>
 </body>
 
 </html>
