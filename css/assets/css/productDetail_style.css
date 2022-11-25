@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', serif;
+}
+body{
+    line-height: 1.5;
+}
+/*.card-wrapper, .feedback{
+    max-width: 1000px;
+    /*margin: 0px auto;
+}*/
+
+.card-wrapper{
+    margin: 0 100px;
+    padding: 0;
+}
+.card-wrapper img{
+    width: 60%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+    
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 3px;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 34px;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #000;
+    margin: 1rem 0;
+}
+
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+.price{
+    font-size: 20px;
+}
+.price span{
+    color: #020202;
+    text-decoration: line-through;
+}
+
+.product-detail h2{
+    text-transform: capitalize;
+    color: #000;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    text-align: justify;
+    padding-top: 10px;
+    opacity: 0.8;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn-add-to-cart,
+.purchase-info .btn-buy-now{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+    width: 200px;
+    align-self: center;
+    font-size: 14px;
+}
+.purchase-info input{
+    width: 120px;
+}
+.purchase-info .btn-add-to-cart{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn-add-to-cart{
+    background: #fff;
+    color: #00B761;
+    height: 45px;
+    border: 1.5px solid #00B761;
+}
+.purchase-info .btn-add-to-cart:hover{
+    opacity: 0.9;
+}
+.purchase-info .btn-buy-now{
+    background: #00B761;
+    height: 45px;
+    color: #fff;
+}
+.purchase-info .btn-buy-now:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+.feedback{
+    margin: 10px 100px;
+}
+.rate img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.rate-title{
+    margin-bottom: 20px;
+}
+.rate-item{
+    margin: 25px;
+}
+.text-center{
+    margin: 10px;
+}
+.input-text {
+    border-radius: 10px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.3);
+    width: 60%;
+    height: 50px;
+    margin-left: 100px;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.button-send{
+        z-index: 0;
+        position: relative;
+        font-size: inherit;
+        font-family: inherit;
+        color: white;
+        font-weight: bold;
+        border-radius: 50px;
+        padding: 10px 20px;
+        outline: none;
+        border: none;
+        background-color: #FF9330;
+        margin-left: 30px;
+        transition: 0.2s ease-in-out;
+}
+.button-send:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+@media screen and (min-width: 1100px){
+    .card-detail {
+        display: grid;
+        grid-template-columns: 0.4fr 0.6fr;
+        grid-gap: 5rem;
+    }
+    
+    .card-wrapper{
+        margin: 0 100px;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .product-content{
+        padding-top: 0;
+    }
+}

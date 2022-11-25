@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+* {
+    font-family: 'Montserrat', serif;
+}
+
+:root {
+    --primary_green: #00B761;
+    --primary_orange: #FF9330;
+    --primary_gray: #686874;
+    --light-gray: #C8C8D5;
+}
+
+.review-list {
+    padding-left: 30px;
+}
+
+.review-header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 30px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: var(--primary_green);
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    margin-top: 30px;
+    color: white;
+}
+
+.review-body {
+    border: 1px var(--light-gray) solid;
+    border-radius: 0 0 25px 25px;
+}
+
+
+.review-body-detail {
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 1fr 1fr;
+    align-items: center;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.action {
+    text-decoration: underline;
+    color: var(--primary_green);
+    margin-top: 10px;
+}
+
+.divider {
+    border-top: 1px solid var(--light-gray);
+}
+
+.product-rating {
+    color: #ffc107;
+}
