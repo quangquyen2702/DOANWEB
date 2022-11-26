@@ -1,0 +1,291 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.row-blog {
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 50px 130px;
+    position: relative;
+}
+
+.row-blog::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+}
+
+.col-7 {
+    width: 70%;
+}
+
+.col-3 {
+    width: 30%;
+    padding-left: 80px;
+    position: relative;
+}
+
+.left-side {
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.container {
+    padding: 20px 50px;
+}
+
+.blog-map {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #757575;
+    font-weight: 500;
+}
+
+.blog-map-item:hover {
+    color: #00b761;
+}
+
+.blog-map-icon {
+    color: #00b761;
+}
+
+.post {
+    width: 80%;
+    padding-left: 50px;
+}
+
+.h2 {
+    font-size: 100px;
+}
+
+.headings {
+    font-size: 40px;
+}
+
+.meta {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #757575;
+}
+
+.link {
+    margin-right: 15px;
+}
+
+.thumbnail {
+    width: 100%;
+    padding-top: 50%;
+    background: url('./assets/img/Blog/Eatclean.jpg') top center / cover no-repeat;
+}
+
+.content {
+    text-align: justify;
+    margin: 20px 0px 50px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.subtitle {
+    color: #FF9330;
+    margin: 20px 0px;
+}
+
+ul {
+    padding-left: 50px;
+}
+
+.post-author {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.author-avatar {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.author-img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.author-info {
+    text-align: center;
+}
+
+.text-secondary {
+    margin: 10px;
+}
+
+.socials-list-icon-blog {
+    font-size: 20px;
+    margin: 0px 2px;
+    padding-bottom: 20px;
+    transition: 0.2s ease-in-out;
+    transform: scale(1);
+    color: #757575;
+}
+
+.socials-list-icon-blog:hover {
+    color: #FF9330;
+    transition: 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.comment-item {
+    margin-top: 30px;
+}
+
+.customer-name {
+    padding-bottom: 5px;
+}
+
+.comment-form {
+    margin-top: 50px;
+    text-align: right;
+}
+
+.post-comments {
+    margin-top: 50px;
+}
+
+.comment-title {
+    margin-bottom: 10px;
+}
+
+.avatar {
+    text-align: left;
+    padding-top: 20px;
+}
+
+.avatar-img {
+    width: 5%;
+    border-radius: 50%;
+}
+
+.customer-img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.comment-content {
+    width: 90%;
+}
+
+.input-text {
+    border-radius: 50px;
+    vertical-align: middle;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 20px;
+    border: 1.5px solid rgba(0, 0, 0, 0.3);
+    width: 75%;
+    height: 50px;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.button-send {
+    z-index: 0;
+    position: relative;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    background-color: #FF9330;
+    margin-left: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+}
+
+
+/* COL 3 */
+
+.related-post-list {
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+.related-title {
+    margin-top: 200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.related-post {
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.075);
+}
+
+.related-post:hover {
+    cursor: pointer;
+}
+
+.related-post-img {
+    width: 100%;
+    display: block;
+}
+
+.related-post-body {
+    padding: 16px;
+    font-size: 15px;
+}
+
+.related-post-heading {
+    font-size: 15px;
+}
+
+.related-post-time {
+    margin-bottom: 10px;
+    color: #757575;
+}
+
+.related-post-desc {
+    margin: 10px 0px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.view-more {
+    color: #FF9330;
+    transition: 0.2s ease-in-out;
+    opacity: 1;
+}
+
+.view-more:hover {
+    transition: 0.2s ease-in-out;
+    opacity: 0.7;
+}

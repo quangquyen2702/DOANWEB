@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+* {
+    font-family: 'Montserrat', serif;
+}
+
+:root {
+    --primary_green: #00B761;
+    --primary_orange: #FF9330;
+    --primary_gray: #686874;
+    --light-gray: #C8C8D5;
+}
+
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    background: white;
+}
+
+.heading {
+    padding: 10px 10px;
+
+}
+
+.num-page{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.num-page2:hover{
+    color: #00B761;
+}
+
+.price-filter {
+    padding: 15px;
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    width: 75%;
+    display: block;
+    margin: 13px;
+    -moz-appearance:none; 
+    -webkit-appearance:none; 
+    appearance:none;
+    background-image: url('/assets/font-awesome/svgs/solid/angle-down.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    outline: none;
+}
+
+.filter-heading{
+    margin-left: 13px; 
+    margin-top: 30px;
+}
+
+filter{
+    margin-left: 13px; 
+    margin-top: 20px;
+}
+
+.btn:hover
+{
+    color: #00B761;
+}
+
+.product-rating{
+    color: #ffc107;
+    margin-left: 15px; 
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.icon-list-group {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+}
+
+.content {
+    display: flex;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.left-row {
+    height: fit-content;
+    padding: 30px 40px;
+    margin-left: 30px ;
+    margin-top: 10px;
+    box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.right-row {
+    padding: 30px 40px;
+    margin-top: -50px;
+    font-weight: bold;
+    clear: right;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.tab-content {
+    padding: 30px 50px;
+    box-shadow: 0 1px 15px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-title {
+    margin-bottom: 15px;
+    color: #00B761;
+}
+
+
+.list-group-item {
+    vertical-align: middle;
+    padding: 20px;
+    margin: 0px;
+    width: 250px;
+    height: 10px;
+    line-height: 20px;
+    font-size: 16px;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
+
+.list-group-item:hover  {
+    color: #00B761;
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.list-group-item a {
+    font-weight: normal;
+}
+
+.profile-name {
+    color: #00B761;
+    font-size: 18px;
+}
+
+.form-group {
+    padding: 10px 20px;
+}
+
+.card-body {
+    padding: 10px 20px;
+}
+
+.list-group-item:hover a {
+    color: #00B761;
+}
+
+.form-group {
+    padding: 10px 20px;
+}
+
+.card-body {
+    padding: 10px 20px;
+}
+
+.container input {
+    border-color: rgb(241, 233, 233);
+    width: 100%;
+    height: 35px;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 00px;
+}
+
+.form-group input {
+    border-color: rgb(241, 233, 233);
+    width: 500px;
+    height: 35px;
+    border: 1.5px solid #ddd;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 10px 0px;
+}
+
+.container button {
+    background: #00B761;
+    border-color: #ddd;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    padding: 10px 20px;
+    outline: 0;
+    margin-right: 2px;
+    margin-bottom: 10px;
+    width: 200px;
+    align-self: center;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.container button:hover {
+    opacity: 80%;
+}
+
+.product-img {
+    width: 300px;
+    /* display: block; */
+    opacity: 1;
+    transform: scale(0.7);
+    transition: 0.2s ease-in-out;
+    margin-bottom: 10px;
+    margin: 0px -50px 10px;
+}
+
+.product-rating:hover{
+    opacity: 1;
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.product-img:hover {
+    opacity: 1;
+    transform: scale(0.85);
+    transition: 0.2s ease-in-out;
+}
+
+.highlight{
+    color: var(--primary_green) !important;
+    font-weight: bold;
+    
+}

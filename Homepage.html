@@ -1,31 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>The Godzilla</title>
     <link href="css/homepage.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <!-- <script src="js/main.js"></script> -->
-
-
+    <script type="text/javascript">
+        // Js FOR SLIDER START
+        var counter = 1;
+        setInterval(function() {
+            document.getElementById('r' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 5000);
+        // Js FOR SLIDER END
+    </script>
 </head>
 
 <body>
     <!--    navigationbar-->
     <nav class="navigation">
-
-         <!-- <marquee direction="left" behavior="scroll" loop=0 scrollamount=15>
-            <div class="welcome">
-                Welcome to TheGodzilla
-            </div>
-        </marquee>-->
-
-        <!--        Logo-->
          <div class="logo">
             <button type="button" onclick="LinkHomepage()">
                <img src="image/homepage/logo.png" >
@@ -35,11 +43,11 @@
         <!--        menu-->
         <div class="contain-menu">
             <div class="nav-mobile" onclick="OpenMenu()">
-                <i class="fas fa-bars"></i>
+               
             </div>
             <ul id="menu">
                 <li>
-                    <a href="homepage.html" class="active">HOME</a></li>
+                    <a href="homepage.html" class="active1">HOME</a></li>
                 </li>
                 <li>
                     <a href="AllProduct.html">PRODUCT CATEGORY</a>
@@ -102,6 +110,60 @@
     </nav>
 
     <!--    navigation end-->
+    <section>
+    <div id="slider">
+        <div class="slides">
+            <!-- radio buttons start -->
+            <input type="radio" name="radio-btn" id="r1">
+            <input type="radio" name="radio-btn" id="r2">
+            <input type="radio" name="radio-btn" id="r3">
+            <input type="radio" name="radio-btn" id="r4">
+            <!-- radio buttons end -->
+
+            <!-- slide img start -->
+            <div class="slide first">
+                <img src="image/homepage/Merry christmas.png" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="image/all-product/1.1.2.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="image/all-product/1.1.3.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="image/all-product/1.1.4.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="image/all-product/1.1.5.jpg" alt="">
+            </div>
+            <!-- slide img end -->
+
+            <!-- automatic slider start -->
+            <div class="slider-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!-- automatic slider end -->
+
+            <!-- manual slider start -->
+            <div class="slider-manual">
+                <label for="r1" class="manual-btn"></label>
+                <label for="r2" class="manual-btn"></label>
+                <label for="r3" class="manual-btn"></label>
+                <label for="r4" class="manual-btn"></label>
+
+            </div>
+            <!-- manual slider end -->
+        </div>
+    </div>
+</section>
+
     <!---- pop up sign in----->
 
     <div class="popup" id="id01">
@@ -236,6 +298,7 @@
         <section id="main">
             <!--    Main-content-->
             <div class="main-content">
+                
                 <!-- text -->
                 <div class="main-text">
                     <span>COLLECTION</span>
@@ -269,78 +332,6 @@
             </div>
         </section>
         <!--    banner end-->
-
-        <!--    Lastest Items-->
-        <section id="latest">
-            <h2>Latest Items</h2>
-
-            <!-- Box-container-->
-            <div class="latest-container">
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/1.The-North-Face-Lace-Up-Boots.jpg" alt="latest-items">
-                    <span>TNF Lace-up Boots</span>
-                </a>
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/2.Timberland-Trekker-Hiking-Boots.jpg" alt="latest-items">
-                    <span>TBL Trekker Hiking Boots</span>
-                </a>
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/3.1.jpg" alt="latest-items">
-                    <span>Adidas Sporty Shoes</span>
-                </a>
-
-                <!-- box-->
-                <!--
-            <a href="#" class="lastest-box">
-                <img src="image/homepage/products/4.Puma-Suede-Classic.jpg" alt="lastest-items">
-                <span>Puma Suede Classic</span>
-            </a>
--->
-
-            </div>
-
-            <!-- Box-container-->
-            <div class="latest-container">
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/5.Converse-Chuck-Taylor-High-Top.jpg" alt="latest-items">
-                    <span>Chuck-Taylor High top</span>
-                </a>
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/Air-Jordan-1.jpg" alt="latest-items">
-                    <span>Air Jordan</span>
-                </a>
-
-                <!-- box-->
-                <a href="ProductDetail.html" class="latest-box">
-                    <img src="image/homepage/products/Converse-x-NBA-Jam-Chuck-Taylor-70-High-Top.jpg" alt="latest-items">
-                    <span>Chuck-Taylor 70</span>
-                </a>
-
-                <!-- box-->
-                <!--
-            <a href="#" class="latest-box">
-                <img src="image/homepage/products/Nike-Air-Force-1.jpg" alt="latest-items">
-                <span>Nike Air-Force</span>
-            </a>
--->
-
-
-
-            </div>
-        </section>
-        <!--    Lasted Items end-->
-
-
         <!--banner 2-->
         <section id="banner">
 
@@ -390,8 +381,339 @@
         </section>
         <!--    banner end-->
 
-
-        <!--    List Brand-->
+        <!--    feature products-->
+      <section>
+        <div id="main1">
+            <div id="content">
+                <div id="best-selling" class="row best-selling-list">
+                    <h2 class="section-heading">FEATURE PRODUCT</h2>
+                    <div class="cd-slider">
+                        <ul class="popular-slider">
+                            <li class="item  current" style="background: white;">
+                                <div class="card" style="background: #F7F7F9;">
+                                    <!-- <img src="url"> -->
+                                    <div class="img">
+                                        <ul class="cd-gallery">
+                                            <li>
+                                                <a href="productDetail.html">
+                                                    <ul class="cd-item-wrapper">
+                                                        <li class="selected">
+                                                            <img src="image/homepage/products/1.The-North-Face-Lace-Up-Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li class="move-right" data-sale="true" data-price="$22">
+                                                            <img src="image/all-product/1.The North Face Lace-Up Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li>
+                                                            <img src="image/all-product/1.The North Face Lace-Up Boots.jpg" alt="Preview image">
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info">
+                                        <h1 class="popular-title">The North Face Boots</h1>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>
+                                            Material(s): 100% Recycled PET ripstop material
+                                            Colour(s): White
+                                            - Lace-up winter boots
+                                            - Oso fleece collar lining
+                                            - Sole Unit Rubber outsole
+                                            - Non-PFC durable water-repellent finish to keep feet dry
+                                            - Adjustable collar bungee to prevent snow from getting in
+                                        <p class="price"><del>85.000 vnđ</del><span class="sale-price popular-sale-price"> 69.000 vnđ</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" style="background: white;">
+                                <div class="card" style="background: #F7F7F9;">
+                                    <!-- <img src="url"> -->
+                                    <div class="img">
+                                        <ul class="cd-gallery">
+                                            <li>
+                                                <a href="productDetail.html">
+                                                    <ul class="cd-item-wrapper">
+                                                        <li class="selected">
+                                                            <img src="image/homepage/products/2.Timberland-Trekker-Hiking-Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li class="move-right" data-sale="true" data-price="$22">
+                                                            <img src="image/homepage/products/2.Timberland-Trekker-Hiking-Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li>
+                                                            <img src="image/homepage/products/2.Timberland-Trekker-Hiking-Boots.jpg" alt="Preview image">
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info">
+                                        <h1 class="popular-title">Timberland-Boots</h1>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>
+                                            Style A2J37231
+                                            These men's mixed-media hikers were designed for comfort with a cushiony EVA-blend foam midsole and lightweight OrthoLite® footbed. Added features include a rubber lug outsole for traction and eco-conscious materials.                                        </p>
+                                        <p class="price"><del>280.000 vnđ</del><span class="sale-price popular-sale-price"> 249.000 vnđ</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" style="background: white;">
+                                <div class="card" style="background: #F7F7F9;">
+                                    <!-- <img src="url"> -->
+                                    <div class="img">
+                                        <ul class="cd-gallery">
+                                            <li>
+                                                <a href="productDetail.html">
+                                                    <ul class="cd-item-wrapper">
+                                                        <li class="selected">
+                                                            <img src="image/homepage/products/3.1.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li class="move-right" data-sale="true" data-price="$22">
+                                                            <img src="image/homepage/products/3.1.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li>
+                                                            <img src="image/homepage/products/3.1.jpg" alt="Preview image">
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info">
+                                        <h1 class="popular-title">Nike-Air-Force-1</h1>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>
+                                            Mã giày: 314192-117 <br>
+                                            Phối màu: White
+                                            Nhà thiết kế: Bruce Kilgore<br>
+                                            Ngày phát hành: ngày 4 tháng 9 năm 2020 <br>
+                                            Thương hiệu: Nike<br>
+                                            Danh mục: Air Force 1                                        
+                                        </p>
+                                        <p class="price"><del>300.000 vnđ</del><span class="sale-price popular-sale-price"> 279.000 vnđ</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" style="background: white;">
+                                <div class="card" style="background: #F7F7F9;">
+                                    <!-- <img src="url"> -->
+                                    <div class="img">
+                                        <ul class="cd-gallery">
+                                            <li>
+                                                <a href="ProductDetail.html">
+                                                    <ul class="cd-item-wrapper">
+                                                        <li class="selected">
+                                                            <img src="image/homepage/products/4.Puma-Suede-Classic.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li class="move-right" data-sale="true" data-price="$22">
+                                                            <img src="image/homepage/products/4.Puma-Suede-Classic.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li>
+                                                            <img src="image/homepage/products/4.Puma-Suede-Classic.jpg" alt="Preview image">
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info">
+                                        <h1 class="popular-title">Puma-Suede-Classic</h1>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>
+                                            Chất liệu: Da lộn <br>
+                                            Kiểu dáng giày sneaker nam cổ thấp <br>
+                                            Dây thắt bản mảnh đan chéo <br>
+                                            Phối logo thương hiệu ở lưỡi gà <br>
+                                            Gam màu hiện đại dễ dàng phối với nhiều trang phục và phụ kiện<br>
+                                            Xuất xứ thương hiệu: Đức                                        </p>
+    
+                                        <p class="price"><del>85.000 vnđ</del><span class="sale-price  popular-sale-price"> 78.000 vnđ</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item" style="background: white;">
+                                <div class="card" style="background: #F7F7F9;">
+                                    <!-- <img src="url"> -->
+                                    <div class="img">
+                                        <ul class="cd-gallery">
+                                            <li>
+                                                <a href="productDetail.html">
+                                                    <ul class="cd-item-wrapper">
+                                                        <li class="selected">
+                                                            <img src="image/homepage/products/1.The-North-Face-Lace-Up-Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li class="move-right" data-sale="true" data-price="$22">
+                                                            <img src="image/homepage/products/1.The-North-Face-Lace-Up-Boots.jpg" alt="Preview image">
+                                                        </li>
+    
+                                                        <li>
+                                                            <img src="image/homepage/products/1.The-North-Face-Lace-Up-Boots.jpg" alt="Preview image">
+                                                        </li>
+                                                    </ul>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="info">
+                                        <h1 class="popular-title">The-North-Face-Boots</h1>
+                                        <div class="stars">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <p>
+                                            Material(s): 100% Recycled PET ripstop material
+                                            Colour(s): White
+                                            - Lace-up winter boots
+                                            - Oso fleece collar lining
+                                            - Sole Unit Rubber outsole
+                                            - Non-PFC durable water-repellent finish to keep feet dry
+                                            - Adjustable collar bungee to prevent snow from getting in                                        </p>
+    
+                                        <p class="price"><del>30.000 vnđ</del><span class="sale-price popular-sale-price"> 19.000 vnđ</span></p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+    
+                        <div class="popular-nav">
+                            <a href="#" class="prev">
+                                <i class="fas fa-chevron-left best-selling-arrow"></i>
+                            </a>
+                            <a href="#" class="next">
+                                <i class="fas fa-chevron-right best-selling-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="best-selling" class="best-selling-list">
+                    <h2 class="section-heading">BEST SELLING</h2>
+                    <div id="product-box">
+                        <div class="middleArea"></div>
+                        <div class="mySlider">
+                            <div class="slideItems item1 active">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/5.Converse-Chuck-Taylor-High-Top.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Converse-Chuck-Taylor</h3>
+                                            <p class="price"><del>60.000 vnđ</del><span class="sale-price"> 49.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item2 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Air-Jordan-1.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Air-Jordan</h3>
+                                            <p class="price"><del>40.000 vnđ</del><span class="sale-price"> 29.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item3 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Nike-Air-Force-1.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Nike-Air-Force-1</h3>
+                                            <p class="price"><del>200.000 vnđ</del><span class="sale-price"> 159.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item4 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Timberland-Swift-Hiking-Boots.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Timberland-Swift-Hiking</h3>
+                                            <p class="price"><del>120.000 vnđ</del><span class="sale-price"> 109.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item5 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Timberland-Warm-Lined-Slip-On.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Timberland-Warm-Lined</h3>
+                                            <p class="price"><del>60.000 vnđ</del><span class="sale-price"> 39.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item6 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Vans-Sk8-Hi-Animal.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Vans-Sk8-Hi</h3>
+                                            <p class="price"><del>40.000 vnđ</del><span class="sale-price"> 29.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="slideItems item7 next">
+                                <a href="AllProduct.html">
+                                    <div class="best-selling-border">
+                                        <img src="image/homepage/products/Vans-Old-Skool.jpg" alt="" class="best-selling-img">
+                                        <div class="best-selling-body">
+                                            <h3 class="best-selling-name">Vans-Old-Skool</h3>
+                                            <p class="price"><del>60.000 vnđ</del><span class="sale-price"> 49.000 vnđ</span></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="myNavs">
+                            <div class="slider-left"><i id="navleft" class="fas fa-chevron-left best-selling-arrow"></i></div>
+                            <div class="slider-right"><i id="navright" class="fas fa-chevron-right best-selling-arrow"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--    List Brand-->
         <section id="list-brand">
             <h2> LIST BRAND </h2>
 
@@ -446,192 +768,6 @@
         </section>
         <!--    list-brand end  -->
 
-
-        <!--    feature products-->
-        <section id="feature-products">
-            <h2>Feature Products</h2>
-
-            <div class="feature-products-container">
-
-
-                <!--        box-container-->
-                <div class="feature-products-box">
-
-                    <!--   img-->
-                    <div class="feature-products-img" onclick="OpenDetail()">
-                        <img src="image/homepage/products/Vans-Old-Skool.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>Vans Old Skool </strong>
-                            <span> $200.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="feature-products-box">
-                    <!--   img-->
-                    <div class="feature-products-img" onclick="OpenDetail()">
-                        <img src="image/homepage/products/Timberland-Warm-Lined-Slip-On.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>TBL Warmed Slip On</strong>
-                            <span> $230.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--  box3-->
-                <div class="feature-products-box" onclick="OpenDetail()">
-                    <!--   img-->
-                    <div class="feature-products-img">
-                        <img src="image/homepage/products/Air-Jordan-1.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>Air Jordan</strong>
-                            <span> $340.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!--        line2-->
-
-
-            <div class="feature-products-container">
-
-
-                <!--        box-container-->
-                <div class="feature-products-box">
-
-                    <!--   img-->
-                    <div class="feature-products-img" onclick="OpenDetail()">
-                        <img src="image/homepage/products/Converse-x-NBA-Jam-Chuck-Taylor-70-High-Top.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>Chuck-Taylor 70 High Top </strong>
-                            <span> $180.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="feature-products-box">
-                    <!--   img-->
-                    <div class="feature-products-img" onclick="OpenDetail()">
-                        <img src="image/homepage/products/Nike-Air-Force-1.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>Nike Air Force</strong>
-                            <span> $240.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--  box3-->
-                <div class="feature-products-box">
-                    <!--   img-->
-                    <div class="feature-products-img" onclick="OpenDetail()">
-                        <img src="image/homepage/products/4.Puma-Suede-Classic.jpg" alt="feature-products">
-                    </div>
-
-                    <div class="feature-products-text-container">
-                        <!--   text-->
-                        <div class="feature-products-text"> <strong>Puma Suede Classic</strong>
-                            <span> $190.00 </span>
-                        </div>
-
-
-
-                        <!--  cart-like-icon-->
-                        <div class="feature-products-icon">
-                            <!--cart-->
-                            <a href="ProductDetail.html"><i class="fa fa-shopping-bag"></i></a>
-                            <!--heart-icon-->
-                            <a href="#"><i class="fa fa-heart"></i></a>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <!--    feature products end-->
-
-
-        <!--    footer-->
         <section id="footer">
             <div class="footer-container">
 
@@ -649,7 +785,7 @@
 
                     </div>
                 </div>
-
+           
                 <!--        footer menu-->
                 <div class="footer-menu">
                     <!-- footer menu box-->
@@ -690,7 +826,23 @@
             </div>
         </section>
     </div>
-</body>
-<script src="js/main.js"></script>
+    <!-- PRODUCT SLIDER START -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src="assets/js/product-slider.js"></script>
+    <!-- PRODUCT SLIDER END -->
 
+    <!-- POPULAR SLIDER START -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src="assets/js/popular slider js/slider-script.js"></script>
+
+    <script src="assets/js/popular slider js/jquery-2.1.1.js"></script>
+    <script src="assets/js/popular slider js/jquery.mobile.min.js"></script>
+    <script src="assets/js/popular slider js/main.js"></script>
+    <!-- POPULAR SLIDER END -->
+
+        
+<!--    feature products end-->
+
+<!--    footer-->
+</body>
 </html>

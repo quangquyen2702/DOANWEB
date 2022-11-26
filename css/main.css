@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #F1F5F8;
+    background-color: #ffffff;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -119,7 +119,7 @@ marquee {
     font-weight: 600
 }
 
-#menu .active {
+#menu .active1 {
     opacity: 1;
     font-weight: 600
 }
