@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/admin/delivery_style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="icon" href="../image/homepage/logo.png" type="img/x-icon" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <title>Admin-The Godzilla</title>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="col-search">
+                    <div class="hamburger">
+                        <a href="#">
+                            <i class="fas fa-angle-double-left"></i>
+                        </a>
+                    </div>
+                    <div class="search-wrapper">
+                        <div class="search-input">
+                            <input type="text" name="" placeholder="Search for admin..." id="">
+                            <div class="search-icon"><i class="fas fa-search"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="fas fa-lightbulb"></i></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-icon" href="#"> <i class="fas fa-bell"></i></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> English </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img class="img-xs rounded-circle" src="../image/admin/ava-admin.jpg" alt="User">
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title"> Delivery </h2>
+                </div>
+                <div class="row">
+                    <div class="col-left">
+                        <div class="payment">
+                            <div class="payment-body">
+                                <div class="row gutter-set">
+                                    <div class="func-search me-auto">
+                                        <input type="text" name="" placeholder="Search" class="form-control">
+                                    </div>
+                                    <div class="func-filter">
+                                    <select class="form-select">
+                                        <option value="" selected>Show 20</option>
+                                        <option value="">Show 30</option>
+                                        <option value="">Show 40</option>
+                                    </select>
+                                </div>
+                                </div>
+                                <hr>
+                                <div class="">
+                                    <table class="table-report table-hover">
+                                        <thead>
+                                            <tr>
+                                                <td><b>DeliveryID</b></td>
+                                                <td><b>OrderID</b></td>
+                                                <td><b>Status</b></td>
+                                                <td><b>Delivery Company</b></td>
+                                                <td><b>Date</b></td>
+                                                <td><b>Action</b></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>#GH185693</td>
+                                                <td>#2323</td>
+                                                <td><span class="status rounded-pill alert-pending">Pending</span></td>
+                                                <td>Shopee Food</td>
+                                                <td>08.11.2021, 13:12 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH247695</td>
+                                                <td>#3653</td>
+                                                <td><span class="status rounded-pill alert-completed">Completed</span></td>
+                                                <td>GrabMart</td>
+                                                <td>03.11.2021, 11:34 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH396581</td>
+                                                <td>#3232</td>
+                                                <td><span class="status rounded-pill alert-canceled">Canceled</span></td>
+                                                <td>GOFOOD</td>
+                                                <td>01.11.2021, 08:13 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH452789</td>
+                                                <td>#6578</td>
+                                                <td><span class="status rounded-pill alert-completed">Completed</span></td>
+                                                <td>Baemin</td>
+                                                <td>03.12.2021, 15:20 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH135678</td>
+                                                <td>#3564</td>
+                                                <td><span class="status rounded-pill alert-completed">Completed</span></td>
+                                                <td>Baemin</td>
+                                                <td>20.12.2021, 09:34 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH853215</td>
+                                                <td>#7890</td>
+                                                <td><span class="status rounded-pill alert-completed">Completed</span></td>
+                                                <td>Shopee Food</td>
+                                                <td>20.11.2021, 15:10 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH764982</td>
+                                                <td>#4782</td>
+                                                <td><span class="status rounded-pill alert-pending">Pending</span></td>
+                                                <td>GrabMart</td>
+                                                <td>12.10.2021, 12:45 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH326212</td>
+                                                <td>#2612</td>
+                                                <td><span class="status rounded-pill alert-pending">Pending</span></td>
+                                                <td>Shopee Food</td>
+                                                <td>30.11.2021, 11:56 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH052796</td>
+                                                <td>#1589</td>
+                                                <td><span class="status rounded-pill alert-canceled">Cancled</span></td>
+                                                <td>GOFOOD</td>
+                                                <td>23.11.2021, 13:11 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>#GH111111</td>
+                                                <td>#1111</td>
+                                                <td><span class="status rounded-pill alert-canceled">Cancled</span></td>
+                                                <td>GOFOOD</td>
+                                                <td>11.11.2021, 11:11 </td>
+                                                <td class="text-end">
+                                                    <a href="#" class="btn btn-light">Detail</a>
+                                                    <div class="dropdown">
+                                                        <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-right">
+                        <div class="payment table-section">
+                            <div class="payment-body">
+                                <h5>Filter</h5>
+                                <form>
+                                    <div class="mar">
+                                        <label for="" class="form-label">DeliveryID</label>
+                                        <input type="text" placeholder="Type" class="form-control">
+                                    </div>
+                                    <div class="mar">
+                                        <label for="" class="form-label">OrderID</label>
+                                        <input type="text" placeholder="Type" class="form-control">
+                                    </div>
+                                    <div class="mar">
+                                        <label for="" class="form-label">Status</label>
+                                        <select class="form-select">
+                                            <option value="" selected disabled hidden>Choose</option>
+                                            <option value="">Pending</option>
+                                            <option value="">Completed</option>
+                                            <option value="">Cancel</option>
+                                        </select>
+                                    </div>
+                                    <div class="mar">
+                                        <label for="" class="form-label">Delivery Company</label>
+                                        <select class="form-select">
+                                            <option value="" selected disabled hidden>Choose</option>
+                                            <option value="">GrabMart</option>
+                                            <option value="">Baemin</option>
+                                            <option value="">Shopee Food</option>
+                                            <option value="">GOFOOD</option>
+                                            <option value="">Visa</option>
+                                        </select>
+                                    </div>
+                                    <div class="mar">
+                                        <label for="" class="form-label">Date</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../image/homepage/logo.png" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="../admin/dashBoard.html">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/product.html">
+                        <span class="icon"><i class="fas fa-boxes"></i></span>
+                        <span class="item">Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/order.html">
+                        <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+                        <span class="item">Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/user.html">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/delivery.html">
+                        <span class="icon"><i class="fas fa-dolly green"></i></i></span>
+                        <span class="item green">Delivery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/payment.html">
+                        <span class="icon"><i class="fas fa-cash-register"></i></span>
+                        <span class="item">Payment</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-ticket-alt"></i></span>
+                        <span class="item">Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                        <span class="item">Review</span>
+                    </a>
+                </li>
+
+
+                <hr>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="item">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+
+</body>
+
+</html>

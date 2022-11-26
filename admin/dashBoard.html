@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="icon" href="../image/homepage/logo.png" type="img/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Admin-The Godzilla</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+
+    <!-- <header class="main-header navbar">
+        <div class="col-search">
+            <div class="search-wrapper">
+                <div class="search-input">
+                    <input type="text" name="" placeholder="Hôm nay ăn gì?..." id="">
+                    <div class="search-icon"><i class="fas fa-search"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-nav">
+
+        </div>
+    </header> -->
+
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+
+                <div class="col-search">
+                    <div class="hamburger">
+                        <a href="#">
+                            <i class="fas fa-angle-double-left"></i>
+                        </a>
+                    </div>
+                    <div class="search-wrapper">
+                        <div class="search-input">
+                            <input type="text" name="" placeholder="Search for admin..." id="">
+                            <div class="search-icon"><i class="fas fa-search"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-nav">
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="fas fa-lightbulb"></i></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-icon" href="#"> <i class="fas fa-bell"></i></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"> English </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <img class="img-xs rounded-circle" src="../image/admin/ava-admin.jpg" alt="User">
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="content-header">
+                    <h2 class="content-title"> Dashboard </h2>
+                    <a href="#" class="btn btn-primary">Create report</a>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card card-body mb-4">
+                            <article class="icontext">
+                                <span class="icon ic-sale icon-sm rounded-circle bg-primary-light-sale"><i class="fas fa-dollar-sign"></i></span>
+                                <div class="text">
+                                    <h6 class="mb-1">Total Sales</h6> <span>$19,626,058.20</span>
+                                </div>
+                            </article>
+
+                        </div>
+                        <!-- card  end// -->
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card card-body mb-4">
+                            <article class="icontext">
+                                <span class="icon ic-order icon-sm rounded-circle bg-primary-light-order"><i class="fas fa-clipboard-list"></i></span>
+                                <div class="text">
+                                    <h6 class="mb-1">Total Order</h6> <span>87790</span>
+                                </div>
+                            </article>
+
+                        </div>
+                        <!-- card  end// -->
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="card card-body mb-4">
+                            <article class="icontext">
+                                <span class="icon ic-product icon-sm rounded-circle bg-primary-light-product"><i class="fas fa-shopping-basket"></i></span>
+                                <div class="text">
+                                    <h6 class="mb-1">Total Product</h6> <span>200</span>
+                                </div>
+                            </article>
+
+
+                        </div>
+                        <!-- card  end// -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="card">
+                            <article class="card-body">
+                                <h5 class="card-title">Sale statistics</h5>
+                                <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                                <script>
+                                    var xValues = [60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+                                    var yValues = [7, 15, 15, 20, 25, 26, 35, 39, 14, 20, 30];
+
+                                    new Chart("myChart", {
+                                        type: "line",
+                                        data: {
+                                            labels: xValues,
+                                            datasets: [{
+                                                fill: false,
+                                                lineTension: 0,
+                                                backgroundColor: "rgba(0,0,255,1.0)",
+                                                borderColor: "rgba(0,0,255,0.1)",
+                                                data: yValues
+                                            }]
+                                        },
+                                        options: {
+                                            legend: {
+                                                display: false
+                                            },
+                                            scales: {
+                                                yAxes: [{
+                                                    ticks: {
+                                                        min: 0,
+                                                        max: 40
+                                                    }
+                                                }],
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </article>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-4 col-lg-12">
+                        <div class="card">
+                            <article class="card-body">
+                                <h5 class="card-title">Marketing</h5>
+
+
+
+                                <div class="channel-marketing">
+                                    <h6>Fanpage</h6>
+                                    <div class="progress-container">
+                                        <div class="progress-fill fanpge-bar"></div>
+                                        <span class="progress-text">25%</span>
+                                        <!-- <script>
+                                            function updateProgressBar(progressBar, value) {
+                                                value = Math.round(value);
+                                                progressBar.querySelector(".progress-fill").style.width = '${value}%';
+                                                progressBar.querySelector(".progress-text").textContent = '${value}%';
+                                            }
+                                        </script> -->
+                                    </div>
+                                </div>
+
+                                <div class="channel-marketing">
+                                    <h6>Tik Tok</h6>
+                                    <div class="progress-container">
+                                        <div class="progress-fill tiktok-bar"></div>
+                                        <span class="progress-text">60%</span>
+                                        <!-- <script>
+                                            function updateProgressBar(progressBar, value) {
+                                                value = Math.round(value);
+                                                progressBar.querySelector(".progress-fill").style.width = '${value}%';
+                                                progressBar.querySelector(".progress-text").textContent = '${value}%';
+                                            }
+                                        </script> -->
+                                    </div>
+                                </div>
+
+                                <div class="channel-marketing">
+                                    <h6>Google search</h6>
+                                    <div class="progress-container">
+                                        <div class="progress-fill google-bar"></div>
+                                        <span class="progress-text">55%</span>
+                                        <!-- <script>
+                                            function updateProgressBar(progressBar, value) {
+                                                value = Math.round(value);
+                                                progressBar.querySelector(".progress-fill").style.width = '${value}%';
+                                                progressBar.querySelector(".progress-text").textContent = '${value}%';
+                                            }
+                                        </script> -->
+                                    </div>
+                                </div>
+
+                                <div class="channel-marketing">
+                                    <h6>Other links</h6>
+                                    <div class="progress-container">
+                                        <div class="progress-fill other-bar"></div>
+                                        <span class="progress-text">85%</span>
+                                        <!-- <script>
+                                            function updateProgressBar(progressBar, value) {
+                                                value = Math.round(value);
+                                                progressBar.querySelector(".progress-fill").style.width = '${value}%';
+                                                progressBar.querySelector(".progress-text").textContent = '${value}%';
+                                            }
+                                        </script> -->
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="card table-section">
+                    <div class="card-body">
+                        <h5 class="card-title">Latest orders</h5>
+                        <div class="">
+                            <table class="table-report table-hover">
+                                <tbody>
+                                    <tr>
+                                        <td>2323</td>
+                                        <td><b>Devon Lane</b></td>
+                                        <td>devon@example.com</td>
+                                        <td>$778.35</td>
+                                        <td><span class="status rounded-pill alert-delivered">Delivered</span></td>
+                                        <td>07.05.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2323</td>
+                                        <td><b>Darrell Steward</b></td>
+                                        <td>stew123@mysite.com</td>
+                                        <td>$980.90</td>
+                                        <td><span class="status rounded-pill alert-pending">Pending</span></td>
+                                        <td>12.02.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9053</td>
+                                        <td><b>Mike Jonatan</b></td>
+                                        <td>mike@somename.com</td>
+                                        <td>$778.35</td>
+                                        <td><span class="status rounded-pill alert-pending">Pending</span></td>
+                                        <td>07.05.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1234</td>
+                                        <td><b>Ahmed Hassan</b></td>
+                                        <td>devon@example.com</td>
+                                        <td>$75.30</td>
+                                        <td><span class="status rounded-pill alert-canceled">Cancelled</span></td>
+                                        <td>02.01.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7532</td>
+                                        <td><b>Abdul Mohammad</b></td>
+                                        <td>abdu@example.com</td>
+                                        <td>$190.15</td>
+                                        <td><span class="status rounded-pill alert-delivered">Delivered</span></td>
+                                        <td>17.02.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2323</td>
+                                        <td><b>Devon Lane</b></td>
+                                        <td>devon@example.com</td>
+                                        <td>$778.35</td>
+                                        <td><span class="status rounded-pill alert-delivered">Delivered</span></td>
+                                        <td>07.05.2020</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4521</td>
+                                        <td><b>Alex Pushkin</b></td>
+                                        <td>myphkin@company.com</td>
+                                        <td>$708.35</td>
+                                        <td><span class="status rounded-pill alert-delivered">Delivered</span></td>
+                                        <td>01.05.2019</td>
+                                        <td class="text-end">
+                                            <a href="#" class="btn btn-light">Detail</a>
+                                            <div class="dropdown">
+                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"><i class="fas fa-ellipsis-h"></i></a>
+                                                <!-- <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#">View detail</a>
+                                                    <a class="dropdown-item" href="#">Edit info</a>
+                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
+                                                </div> -->
+                                            </div>
+                                            <!-- dropdown //end -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="sidebar">
+            <div class="logo">
+                <img src="../image/homepage/logo.png" alt="">
+            </div>
+            <ul>
+                <li>
+                    <a href="../admin/dashBoard.html">
+                        <span class="icon"><i class="fas fa-tachometer-alt green"></i></span>
+                        <span class="item green">My Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/product.html">
+                        <span class="icon"><i class="fas fa-boxes"></i></span>
+                        <span class="item">Product</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/order.html">
+                        <span class="icon"><i class="fas fa-clipboard-list"></i></span>
+                        <span class="item">Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/user.html">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <span class="item">User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/delivery.html">
+                        <span class="icon"><i class="fas fa-dolly"></i></i></span>
+                        <span class="item">Delivery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../admin/payment.html">
+                        <span class="icon"><i class="fas fa-cash-register"></i></span>
+                        <span class="item">Payment</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-ticket-alt"></i></span>
+                        <span class="item">Voucher</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-clipboard-check"></i></span>
+                        <span class="item">Review</span>
+                    </a>
+                </li>
+
+
+                <hr>
+
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+                        <span class="item">Log out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+
+</body>
+
+</html>
