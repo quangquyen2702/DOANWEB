@@ -107,7 +107,7 @@ function Signinadmin() {
         document.getElementById('error-username').style.visibility = 'hidden';
         document.getElementById('error-pwd').style.visibility = 'hidden';
         document.querySelector(".popup").classList.remove("active");
-        window.open("FrameAdmin.html", "_blank");
+        window.open("admin/dashBoard.html", "_blank");
     }
     if (uname === '') {
         uname = 'Username cannot be blank';
