@@ -331,7 +331,7 @@ ul.dropdown_menu>li:hover>ul.submenu {
     display: none;
     transform: translate(-50%, -50%) scale(1.25);
     width: 600px;
-    height: 450px;
+    height: 600px;
     padding: 30px 40px;
     background: #fff;
     box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
