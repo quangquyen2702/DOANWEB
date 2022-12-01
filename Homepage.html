@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    
     <script type="text/javascript">
         // Js FOR SLIDER START
@@ -302,7 +302,8 @@
             <div class="main-content">
                 
                 <!-- text -->
-                <div class="main-text">
+                <div class="main-text" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine"  data-aos-duration="800">
                     <span>COLLECTION</span>
                     <h1> Winter Sneakers Best List </h1>
                     <p> Winter will get here soon. Our store is having some sneakers of the TheGodzilla's new collection. What are you waiting for? </p>
@@ -310,7 +311,8 @@
                 </div>
 
                 <!-- Main-img -->
-                <div class="main-img">
+                <div class="main-img" data-aos="fade-left" data-aos-offset="300"
+                data-aos-easing="ease-in-sine"  data-aos-duration="1000">
                     <img src="image/homepage/products/main_img.jpg" alt="Sneaker">
                 </div>
             </div>
@@ -320,13 +322,13 @@
         <!--banner-->
         <section id="banner">
             <!--img-->
-            <div class="banner-img">
+            <div class="banner-img" data-aos="zoom-in-right" data-aos-duration="1200">
                 <img src="image/homepage/banner.png" alt="banner">
             </div>
 
 
             <!--text-->
-            <div class="banner-text">
+            <div class="banner-text" data-aos="zoom-in-right" data-aos-duration="1200">
                 <strong>Discount 5% for Newbie</strong>
                 <!--                <span>From $230</span>-->
                 <p> Welcome to TheGodzilla's website! What's better than shopping here for the first time with 5% off code up to $20, only for newbie? Just do it! </p>
@@ -340,7 +342,7 @@
 
             <!--text-->
 
-            <div class="banner-text2">
+            <div class="banner-text2" data-aos="zoom-out-right" data-aos-duration="1000">
                 <h2>OUR COMMITMENT</h2>
 
                 <div class="banner-text2-container">
@@ -373,7 +375,7 @@
             </div>
 
             <!--img-->
-            <div class="banner-img2">
+            <div class="banner-img2" data-aos="zoom-out-left" data-aos-duration="1200">
                 <img src="image/homepage/banner2.png" alt="banner">
             </div>
 
@@ -828,6 +830,11 @@
             </div>
         </section>
     </div>
+    <!-- AOS ANIMATION -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <!-- PRODUCT SLIDER START -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src="assets/js/product-slider.js"></script>

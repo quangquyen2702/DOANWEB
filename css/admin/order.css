@@ -8,6 +8,8 @@
 
 body {
     background: #F1F5F8;
+    font-family: 'Quicksand', sans-serif;
+    ;
 }
 
 .content {
@@ -15,38 +17,31 @@ body {
     margin: 20px;
 }
 
-.sort {
-    text-align: right;
-    display: block;
-    color: #031824;
-    font-weight: bold;
+.btn {
     margin: 0px 2%;
+    background: #031824;
+    color: #F1F5F8;
+    padding: 10px 10px;
+    text-align: center
 }
 
-.sort select {
-    width: 8%;
+.btn:hover {
+    background: white;
+    color: #031824;
+    transition: 0.5s;
 }
 
 .content .cards {
+    padding: 10px 5px 15px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .content .cards .card {
-    width: 350px;
-    height: 250px;
-    background: #fff;
-    margin: 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: 04px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
-}
-
-.content .cards .card-1 {
-    width: 700px;
-    height: 250px;
+    width: 250px;
+    height: 150px;
     background: #fff;
     margin: 20px 10px;
     display: flex;
@@ -58,19 +53,17 @@ body {
 .content .content-2 {
     min-height: 60vh;
     display: flex;
-    justify-content: space-around;
     align-items: flex-start;
-    flex-wrap: wrap;
 }
 
 .content .content-2 .recent-product {
     min-height: 50vh;
-    flex: 5;
+    flex: 6;
     background: #ffff;
-    margin: 0 25px 25px 25px;
+    margin: 0 25px 25px 5px;
     box-shadow: 04px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 table {
@@ -79,6 +72,29 @@ table {
 
 th,
 td {
-    text-align: left;
-    padding: 8px
+    text-align: center;
+    padding: 16px;
+}
+
+.sort {
+    text-align: right;
+    display: block;
+    color: #031824;
+    font-weight: bold;
+    margin: 10px 2%;
+}
+
+.sort select {
+    width: 8%;
+}
+
+a {
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 6px;
+}
+
+.title {
+    display: flex;
+    margin-top: 10px;
 }

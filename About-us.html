@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
     <link rel="stylesheet" href="css/about-us.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -115,8 +117,9 @@
     </section>
     
     <section class="container">
-
-        <div class="card1">
+        <div class="card1" data-aos="fade-right"
+        data-aos-duration="800"
+        >
             <div class="vision">
                 <div class="tittle">OUR VISION</div>
                 <div class="text">
@@ -135,10 +138,12 @@
 
     <section class="container2">
 
-        <div>
+        <div data-aos="fade-right" data-aos-offset="300"
+        data-aos-easing="ease-in-sine"  data-aos-duration="800">
             <img src="image/AboutUs/misson.png" width="100%" height="550px" />
         </div>
-        <div class="mission">
+        <div class="mission" data-aos="fade-left" data-aos-offset="300"
+        data-aos-easing="ease-in-sine"  data-aos-duration="1000">
             <div class="tittle2">OUR MISSION</div>
             <div class="text2">
                 Our mission is what drives us to do everything possible to expand human potential. We do that by creating. Groundbreaking sport innovations, by making our products more sustainably, by building a creative and diverse.<br />
@@ -244,6 +249,11 @@
             </div>
         </div>
     </section>
+     <!-- AOS ANIMATION -->
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script>
+         AOS.init();
+       </script>
 </body>
 
 </html>

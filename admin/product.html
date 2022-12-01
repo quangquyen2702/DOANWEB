@@ -1,328 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/admin/product_style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link rel="icon" href="../image/homepage/logo.png" type="img/x-icon" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <title>Admin-The Godzilla</title>
-    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-    </head>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://kit.fontawesome.com/25879f3c8f.js" crossorigin="anonymous"></script>
+    <!--    <link href="style.css" rel="stylesheet">-->
+    <title></title>
+    <script src="../js/admin/product.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel='stylesheet'>
+    <link rel="stylesheet" href="../css/admin/product.css">
+</head>
+
 <body>
-    <div class="wrapper">
-        <div class="section">
-            <div class="top_navbar">
-
-                <div class="col-search">
-                    <div class="hamburger">
-                        <a href="#">
-                            <i class="fas fa-angle-double-left"></i>
-                        </a>
-                    </div>
-                    <div class="search-wrapper">
-                        <div class="search-input">
-                            <input type="text" name="" placeholder="Search for admin..." id="">
-                            <div class="search-icon"><i class="fas fa-search"></i></div>
-                        </div>
-                    </div>
+    <div class="content">
+        <a href="#" class="btn">Add Product</a>
+        <div class="sort">
+            <span>Sort by</span>
+            <select name="sort-by">
+                        <option value="Date">Date</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                        <option value="Year">Year</option>
+            </select>
+        </div>
+        <div class="content-2">
+            <div class="recent-product">
+                <div class="title">
+                    <span style="color:#031824; font-size:22px; font-weight:bold; margin-left: 20px">Product</span>
                 </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Color</th>
+                            <th>Brand</th>
+                            <th>Activity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="products"></tbody>
 
-                <div class="col-nav">
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a class="nav-link btn-icon" onclick="darkmode(this)" title="Dark mode" href="#"> <i class="fas fa-lightbulb"></i></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn-icon" href="#"> <i class="fas fa-bell"></i></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> English </a>
-                        </li>
 
-                        <li class="nav-item">
-                            <img class="img-xs rounded-circle" src="../image/admin/ava-admin.jpg" alt="User">
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-            <div class="container">
-                <div class="content-header">
-                    <h2 class="content-title"> Product Management </h2>
-                    <a href="#" class="btn btn-primary">+ Add new products</a>
-                </div>
-
-                
-
-                <div class="card table-section">
-                    <div class="card-body">
-                        <div class="row gutter-set">
-                            <div class="func-search me-auto">
-                                    <input type="text" name="" placeholder="Search" class="form-control">
-                            </div>
-                            <div class="func-filter">
-                                <select class="form-select">
-                                    <option value="" selected>In stock</option>
-                                    <option value="">Out of stock</option>
-                                    <option value="">Low stock</option>
-                                    <option value="">Show all</option>
-                                </select>
-                            </div>
-
-                            <div class="func-filter">
-                                <select class="form-select">
-                                    <option value="" selected>Show 20</option>
-                                    <option value="">Show 30</option>
-                                    <option value="">Show 40</option>
-                                </select>
-                            </div>
-                        </div>
-                            <hr>
-                        <div class="">
-                            <table class="table-report table-hover">
-                                <thead>
-                                    <tr>
-                                        <td>ProductID</td>
-                                        <td>Name</td>
-                                        <td>Last Update</td>
-                                        <td>Price</td>
-                                        <td>Status</td>
-                                        <td>Inventory</td>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>#OF01</td>
-                                        <td><b>New Zealand Apple</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$30</td>
-                                        <td><span class="status rounded-pill alert-delivered">In stock</span></td>
-                                        <td>100KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF02</td>
-                                        <td><b>America Strawberry</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$15</td>
-                                        <td><span class="status rounded-pill alert-pending">Low stock</span></td>
-                                        <td>3KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF03</td>
-                                        <td><b>Banana</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$4</td>
-                                        <td><span class="status rounded-pill alert-pending">Low stock</span></td>
-                                        <td>4KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF04</td>
-                                        <td><b>Blueberry</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$7.6</td>
-                                        <td><span class="status rounded-pill alert-canceled">Out of stock</span></td>
-                                        <td>0KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF05</td>
-                                        <td><b>Cucumber</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$5</td>
-                                        <td><span class="status rounded-pill alert-delivered">In stock</span></td>
-                                        <td>20KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF06</td>
-                                        <td><b>Pear</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$17</td>
-                                        <td><span class="status rounded-pill alert-delivered">In stock</span></td>
-                                        <td>25KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"> <i class="fas fa-ellipsis-h"></i> </a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>#OF07</td>
-                                        <td><b>Pumpkin</b></td>
-                                        <td>Nov 30, 2021</td>
-                                        <td>$7</td>
-                                        <td><span class="status rounded-pill alert-delivered">In stock</span></td>
-                                        <td>30KG</td>
-                                        <td class="text-end">
-                                            <a href="#" class="btn btn-light">Edit</a>
-                                            <div class="dropdown">
-                                                <a href="#" data-bs-toggle="dropdown" class="btn btn-light"><i class="fas fa-ellipsis-h"></i></a>
-                                                <!-- <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="#">View detail</a>
-                                                    <a class="dropdown-item" href="#">Edit info</a>
-                                                    <a class="dropdown-item text-danger" href="#">Delete</a>
-                                                </div> -->
-                                            </div>
-                                            <!-- dropdown //end -->
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-
+                    <!-- <tr>
+                            <td>1347</td>
+                            <td>Nike Air Force</td>
+                            <td>38</td>
+                            <td>1</td>
+                            <td>White</td>
+                            <td>Nike</td>
+                            <td>Running</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr>
+                            <td>2467</td>
+                            <td>Vans Old Skool</td>
+                            <td>40</td>
+                            <td>2</td>
+                            <td>Black</td>
+                            <td>Vans</td>
+                            <td>Casual</td>
+                            <td>$80</td>
+                        </tr>
+                        <tr>
+                            <td>4574</td>
+                            <td>Warmed Slip On</td>
+                            <td>39</td>
+                            <td>1</td>
+                            <td>Orange</td>
+                            <td>Timberland</td>
+                            <td>Casual</td>
+                            <td>$45</td>
+                        </tr>
+                        <tr>
+                            <td>8909</td>
+                            <td>Chuck-Taylor 70</td>
+                            <td>39</td>
+                            <td>1</td>
+                            <td>Mix</td>
+                            <td>Converse</td>
+                            <td>Casual</td>
+                            <td>$180</td>
+                        </tr>
+                        <tr>
+                            <td>8756</td>
+                            <td>Air Jordan</td>
+                            <td>43</td>
+                            <td>1</td>
+                            <td>Blue</td>
+                            <td>Nike</td>
+                            <td>Running</td>
+                            <td>$80</td>
+                        </tr>
+                        <tr>
+                            <td>2314</td>
+                            <td>Lace-up Boots</td>
+                            <td>40</td>
+                            <td>1</td>
+                            <td>Pink</td>
+                            <td>The North Face</td>
+                            <td>Tennis</td>
+                            <td>$70</td>
+                        </tr> -->
+                </table>
             </div>
         </div>
-
-
-        <div class="sidebar">
-            <div class="logo">
-                <img src="../image/homepage/logo.png" alt="">
-            </div>
-            <ul>
-                <li>
-                    <a href="../admin/dashBoard.html">
-                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-                        <span class="item">My Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../admin/product.html">
-                        <span class="icon"><i class="fas fa-boxes green"></i></span>
-                        <span class="item green">Product</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../admin/order.html">
-                        <span class="icon"><i class="fas fa-clipboard-list"></i></span>
-                        <span class="item">Order</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../admin/user.html">
-                        <span class="icon"><i class="fas fa-user"></i></span>
-                        <span class="item">User</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../admin/delivery.html">
-                        <span class="icon"><i class="fas fa-dolly"></i></i></span>
-                        <span class="item">Delivery</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="../admin/payment.html">
-                        <span class="icon"><i class="fas fa-cash-register"></i></span>
-                        <span class="item">Payment</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-ticket-alt"></i></span>
-                        <span class="item">Voucher</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-clipboard-check"></i></span>
-                        <span class="item">Review</span>
-                    </a>
-                </li>
-
-
-                <hr>
-
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-cog"></i></span>
-                        <span class="item">Settings</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-                        <span class="item">Log out</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
     </div>
-
 </body>
+
 </html>

@@ -4,7 +4,7 @@ xmlhttp.onreadystatechange = function() {
         myFunction(this);
     }
 };
-xmlhttp.open("GET", "data/product.xml", true);
+xmlhttp.open("GET", "../data/product.xml", true);
 xmlhttp.send();
 
 function myFunction(xml) {
