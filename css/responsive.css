@@ -3,7 +3,6 @@
       display: none;
     }
   }
-/* Mobile */
 @media (max-width: 739px) {
     .prdetail-row {
       display: flex;
@@ -46,7 +45,6 @@
       background-color: #000;
     }
   }
-/* Tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
     .tablet {
       display: none;
