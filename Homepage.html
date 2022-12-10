@@ -33,23 +33,23 @@
 
 <body>
     <!--    navigationbar-->
-    <nav class="navigation">
+     <!--    navigationbar-->
+     <nav class="navigation">
+        <!--        Logo-->
          <div class="logo">
             <button type="button" onclick="LinkHomepage()">
-               <img src="image/homepage/logo.png" >
+               <img src="image/homepage/logo.png" style="width: 100%; height:100% " >
             </button>
         </div>
-
+ 
         <!--        menu-->
         <div class="contain-menu">
             <div class="nav-mobile" onclick="OpenMenu()">
-               
+                <i class="fas fa-bars"></i>
             </div>
             <ul id="menu">
                 <li>
-
                     <a href="Homepage.html" class="active1">HOME</a></li>
-
                 </li>
                 <li>
                     <a href="AllProduct.html">PRODUCT CATEGORY</a>
@@ -88,7 +88,7 @@
                 </li>
                 <li><a href="news.html">NEWS</a></li>
                 <li><a href="Customer Service_FAQ.html">CUSTOMER SERVICE</a></li>
-                <li><a href="About-us.html">ABOUT US</a></li>
+                <li><a href="About-us.html" >ABOUT US</a></li>
             </ul>
         </div>
 
@@ -320,7 +320,7 @@
         <!--    main-section-end-->
 
         <!--banner-->
-        <section id="banner">
+        <div id="banner">
             <!--img-->
             <div class="banner-img" data-aos="zoom-in-right" data-aos-duration="1200">
                 <img src="image/homepage/banner.png" alt="banner">
@@ -329,12 +329,12 @@
 
             <!--text-->
             <div class="banner-text" data-aos="zoom-in-right" data-aos-duration="1200">
-                <strong>Discount 5% for Newbie</strong>
+                <strong id="banner-strong">Discount 5% for Newbie</strong>
                 <!--                <span>From $230</span>-->
-                <p> Welcome to TheGodzilla's website! What's better than shopping here for the first time with 5% off code up to $20, only for newbie? Just do it! </p>
-                <a>GET VOUCHER</a>
+                <p id="banner-detail"> Welcome to TheGodzilla's website! What's better than shopping here for the first time with 5% off code up to $20, only for newbie? Just do it! </p>
+                <a id="getvoucher">GET VOUCHER</a>
             </div>
-        </section>
+        </div>
         <!--    banner end-->
         <!--banner 2-->
         <section id="banner">
@@ -817,16 +817,14 @@
                         </ul>
 
                     </div>
-
-
-                    <!-- footer menu box-->
-                    <div class="footer-email-form">
+                </div>
+                     <!-- footer menu box-->
+                     <div class="footer-email-form">
                         <strong>join our newsletter</strong>
                         <ul>
                             <input type="email" placeholder="Enter your email address" id="footer-email">
                             <input type="submit" value="Subcribe" id="footer-email-btn"> </ul>
                     </div>
-                </div>
             </div>
         </section>
     </div>

@@ -1,6 +1,24 @@
-#wrapper {
-    padding: 0% 3%;
+@media screen and (min-width: 740px) and (max-width: 1024px) 
+{
+    .filter
+    {
+        visibility: hidden;
+    }
+    #wrapper .headline
+    {
+        margin-top: 10px;
+    }
+   
 }
+@media screen and (max-width: 740px) 
+{
+    .filter
+    {
+        visibility: hidden;
+    }
+    
+}
+
 
 .category-top {
     display: flex;
@@ -174,8 +192,4 @@ ul.products li img {
     color: #031824;
     padding: 2px 0px;
     font-weight: 800;
-}
-#footer
-{
-    background: #446084;
 }

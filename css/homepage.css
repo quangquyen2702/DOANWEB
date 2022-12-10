@@ -9,7 +9,84 @@
     --light-gray: #C8C8D5;
     --primary_blue: #031824;
 }
+/* respondsive */
+/* Mobile: width < 740px */
+@media screen and (max-width: 740px) 
+{
+    .list-brand-container
+    {
+        flex-direction: column;
+    }
+    .main-content
+    {
+        flex-direction: column-reverse;
+        
+    }
+    .banner-text
+    {
+        visibility: hidden;
+        
+    }
+    #banner
+    {
+        flex-direction: column;
+    }
+    #banner .banner-img2
+      {
+        display: none;
+      }
+   
+   
+    
 
+
+  
+}
+
+/* Tablet: width >=740px and width <1024 px */
+@media only screen and (min-width: 740px) and (max-width: 1024px)
+{
+    .main-content
+    {
+        flex-direction: column-reverse;
+        
+    }
+    .banner-text #banner-detail
+    {
+        display: none;
+    }
+    .banner-text #getvoucher
+    {
+        visibility: hidden;
+    }
+  
+    .banner-text #banner-strong
+    {
+        margin-top: 20px;
+    }
+    .banner-img
+    {
+       height: 300px;
+       
+    }
+
+    .banner-text #banner-strong
+    {
+        margin-top: 40px;
+    }
+    #banner .banner-img
+    {
+       width: 100%;
+    }
+    
+      #banner .banner-img2
+      {
+        display: none;
+      }
+     
+ 
+}
+/* PC: widthc>=1024px */
 
 #main {
     background-color:#ffffff;
@@ -345,7 +422,7 @@
 
 #banner {
     max-width: 90%;
-    display: grid;
+    display: flex;
     grid-template-columns: 70% 30%;
     margin: auto;
     height: 300px;
@@ -951,13 +1028,18 @@
     transform: translateY(0);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 740px) and (max-width: 1024px) {
     .card {
         max-width: 70%;
     }
+    .card .info p
+    {
+        display: none;
+    }
+   
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 739px) {
     .card {
         text-align: center;
     }

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style>
+        table, tr, td {
+            border: 1px;    
+        }
+
+        table 
+        {
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function focusname() {
+            document.getElementById("name").focus();
+        }
+
+        function dropdown(dayfield, monthfield, yearfield) 
+        {
+            var today = new Date()
+            var dayfield = document.getElementById(dayfield)
+            var monthfield = document.getElementById(monthfield)
+            var yearfield = document.getElementById(yearfield)
+            var monthtext = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+            for (var i = 0; i < 31; i++)
+                dayfield.options[i] = new Option(i, i + 1)
+            dayfield.options[today.getDate()] = new Option(today.getDate(), today.getDate(), true, true) 
+            for (var m = 0; m < 12; m++)
+                monthfield.options[m] = new Option(monthtext[m], monthtext[m])
+                 monthfield.options[today.getMonth()] = new Option(monthtext[today.getMonth()], monthtext[today.getMonth()], true, true)
+            for (var y = 1950; y < 2005; y++) 
+              
+                 yearfield.options[y] = new Option(y,y+1)
+                yearfield.options[today.getFullYear()] = new Option(today.getFullYear(), today.getFullYear(), true, true) 
+
+            }
+        function Kiemtra() {
+            var user = document.getElementById("name");
+            if (user.value == "") {
+                alert("Vui lòng nhập tên")
+            }
+
+            var email = document.getElementById("email");
+            var reg_email = /^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
+            if (email.value != "") {
+                if (reg_email.test(email.value) == false) {
+                    alert("Email không hợp lệ")
+                }
+            }
+            else
+                alert("Vui lòng nhập email")
+
+            var name = document.getElementById("name").value;
+
+            var email = document.getElementById("email").value;
+
+            var sex = "";
+
+
+            const arr = document.querySelectorAll("#sex");
+            for (const el of arr) {
+                if (el.checked) {
+                    sex = el.value;
+                }
+            }
+            if (sex === "") {
+                alert("Chọn giới tính");
+            }
+
+
+            var sothich = "";
+            var favArr = document.getElementsByName("sothich");
+            for (const el of favArr) {
+                if (el.checked) {
+                    if (sothich == "") {
+                        sothich = el.value;
+                    } else {
+                        sothich += ",";
+                        sothich += el.value;
+                    }
+                }
+            }
+
+            var d = document.getElementById("daydropdown").value;
+            var m = document.getElementById("monthdropdown").value;
+            var y = document.getElementById("yeardropdown").value;
+            var DoB = d + "/" + m + "/" + y;
+
+            var color = "";
+
+            const colorArr = document.querySelectorAll(".color");
+            for (const el of colorArr) {
+                if (el.checked) {
+                    color = el.value;
+                }
+            }
+            if (color === '') {
+                alert("Chọn màu yêu thích");
+            }
+
+            var table = document.getElementById("mytable");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var cell5 = row.insertCell(4);
+            var cell6 = row.insertCell(5);
+            cell1.innerHTML = name;
+            cell2.innerHTML = email;
+            cell3.innerHTML = sex;
+            cell4.innerHTML = DoB;
+            cell5.innerHTML = sothich;
+            cell6.innerHTML = color;
+        }
+
+        function fillColor(mytable) {
+            var myTable = document.getElementById(mytable);
+            var rows = document.getElementsByTagName("tr");
+            for (var i = 0; i < rows.length; i++) {
+                rows[i].onmouseover = function () {
+                    this.style.backgroundColor = "yellow";
+                }
+                rows[i].onmouseout = function () {
+                    this.style.backgroundColor = "white"; 
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form id="form" style="width:50%; margin-left:8cm; border: groove 1px black; line-height:0.75cm">
+        <div style="margin-left:0.5cm">
+            <h1>Đăng kí thành viên</h1>
+            <hr style="width:100%; height:1px">
+
+            <label for="name">Tên(*)</label>
+            <input id="name" type="text"> <br>
+
+            <label>Ngày sinh(*)</label>
+            <label for="daydropdown">Ngày:</label>
+            <select id="daydropdown" size="1"> <option value="1">0</option><option value="1" selected="">1</option><option value="3">2</option><option value="4">3</option><option value="5">4</option><option value="6">5</option><option value="7">6</option><option value="8">7</option><option value="9">8</option><option value="10">9</option><option value="11">10</option><option value="12">11</option><option value="13">12</option><option value="14">13</option><option value="15">14</option><option value="16">15</option><option value="17">16</option><option value="18">17</option><option value="19">18</option><option value="20">19</option><option value="21">20</option><option value="22">21</option><option value="23">22</option><option value="24">23</option><option value="25">24</option><option value="26">25</option><option value="27">26</option><option value="28">27</option><option value="29">28</option><option value="30">29</option><option value="31">30</option></select>
+
+            <label for="monthdropdown">Tháng:</label>
+            <select id="monthdropdown" size="1"><option value="Jan">Jan</option><option value="Feb">Feb</option><option value="Mar">Mar</option><option value="Apr">Apr</option><option value="May">May</option><option value="Jun">Jun</option><option value="Jul">Jul</option><option value="Aug">Aug</option><option value="Sept">Sept</option><option value="Oct">Oct</option><option value="Nov" selected="">Nov</option><option value="Dec">Dec</option></select>
+
+            <label for="yeardropdown">Năm:</label>
+            <select id="yeardropdown" size="1"><option value="1950" selected="">1950</option><option value="2020">2020</option><option value="2021">2021</option><option value="2022">2022</option><option value="2023">2023</option><option value="2024">2024</option><option value="2025">2025</option><option value="2026">2026</option><option value="2027">2027</option><option value="2028">2028</option><option value="2029">2029</option><option value="2030">2030</option><option value="2031">2031</option><option value="2032">2032</option><option value="2033">2033</option><option value="2034">2034</option><option value="2035">2035</option><option value="2036">2036</option><option value="2037">2037</option><option value="2038">2038</option><option value="2039">2039</option><option value="2040">2040</option><option value="2041">2041</option><option value="2042">2042</option><option value="2043">2043</option><option value="2044">2044</option><option value="2045">2045</option><option value="2046">2046</option><option value="2047">2047</option><option value="2048">2048</option><option value="2049">2049</option><option value="2050">2050</option><option value="2051">2051</option><option value="2052">2052</option><option value="2053">2053</option><option value="2054">2054</option><option value="2055">2055</option><option value="2056">2056</option><option value="2057">2057</option><option value="2058">2058</option><option value="2059">2059</option><option value="2060">2060</option><option value="2061">2061</option><option value="2062">2062</option><option value="2063">2063</option><option value="2064">2064</option><option value="2065">2065</option><option value="2066">2066</option><option value="2067">2067</option><option value="2068">2068</option></select> <br>
+        
+            <label for="sex">Giới tính(*):</label>
+            <input id="sex" type="radio" value="Nam" name="sex"> Nam
+            <input id="sex" type="radio" value="Nữ" name="sex"> Nữ
+
+            <label for="email">Email(*):</label>
+            <input id="email" type="text" placeholder="abc@gmail.com"> <br>
+
+            <label for="sothich">Sở thích của bạn:</label> <br>
+            <input name="sothich" type="checkbox" value="Mua sắm"> Mua sắm <br>
+            <input name="sothich" type="checkbox" value=" Du lịch"> Du lịch <br>
+            <input name="sothich" type="checkbox" value="Tán gẫu"> Tán gẫu <br>
+            <input name="sothich" type="checkbox" value="Đọc sách"> Đọc sách <br>
+            <input name="sothich" type="checkbox" value="Nghe nhạc"> Nghe nhạc <br>
+
+            <label for="mau">Màu yêu thích của bạn:</label> <br>
+            <input class="color" name=" mau" type="radio" value="Màu xanh da trời"> <span style="background-color:blue">Màu xanh da trời</span> <br>
+            <input class="color" name=" mau" type="radio" value="Màu đỏ"> <span style="background-color:red">Màu đỏ</span> <br>
+            <input class="color" name=" mau" type="radio" value="Màu vàng"> <span style="background-color:yellow">Màu vàng</span> <br>
+            <input class="color" name=" mau" type="radio" value="Màu xanh lá cây"> <span style="background-color:forestgreen">Màu xanh lá cây</span> <br>
+            <input class="color" name=" mau" type="radio" value="Màu xanh tím"> <span style="background-color:blueviolet">Màu xanh tím</span> <br>
+
+            <button type="button" onclick="Kiemtra()"> Đăng ký </button>
+            <input id="reset" type="reset" onclick="focusname()">
+            <table id="mytable" border="2">
+                <!-- <tbody> -->
+                    <tr style="background-color: white; border-color: black;">
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Giới tính</th>
+                        <th>Năm sinh</th>
+                        <th>Sở thích</th>
+                        <th>Màu yêu thích</th>
+                    </tr>
+                <!-- </tbody> -->
+            </table>
+        </div>
+    </form>
+</body>
+</html>
