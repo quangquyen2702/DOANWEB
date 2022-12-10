@@ -958,9 +958,6 @@ ul.dropdown_menu>li:hover>ul.submenu {
         width: 200px;
         max-width: 100%;
       }
-    .filter
-    {
-        display: none;
-    }
+   
 }
 }
