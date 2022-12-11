@@ -82,10 +82,10 @@
     </nav>
 
     <!--    navigation end-->
-    <p>
+    <div class="img">
         <img src="image/customer_FAQ/banner.jpg" width="100%" height="550px" />
-    </p>
-    <p style="margin-top:70px; text-align:center">
+    </div>
+    <div class="row" style="margin-top:70px; text-align:center">
         <a href="Customer Service_FAQ.html" id="FAQ">
             FAQ
         </a> &emsp;
@@ -95,83 +95,145 @@
         <a id="Contact" onclick="open_popup()">
             Contact Us
         </a>
-    </p>
-    <div class="pop-up" id="pop-up">
-        <div class="container-popup">
-            <div class="form">
-                <div class="contact-info">
-                    <h3 class="title">Let's get in touch</h3>
-                    <p class="text">
-                        Are easy to find, so a visitor can quickly get in touch should they need it.
-                    </p>
-                    <div class="info">
-                        <div class="information">
-                            <img src="image/ContactUs/placeholder.png" class="icon" alt="" />
-                            <p>92 Cherry Drive Uniondate, NY 11533</p>
+        <div class="pop-up" id="pop-up">
+            <div class="container-popup">
+                <div class="form">
+                    <div class="contact-info">
+                        <h3 class="title">Let's get in touch</h3>
+                        <p class="text">
+                            Are easy to find, so a visitor can quickly get in touch should they need it.
+                        </p>
+                        <div class="info">
+                            <div class="information">
+                                <img src="image/ContactUs/placeholder.png" class="icon" alt="" />
+                                <p>92 Cherry Drive Uniondate, NY 11533</p>
+                            </div>
+                            <div class="information">
+                                <img src="image/ContactUs/email.png" class="icon" alt="" />
+                                <p>customerservice@TheGodzilla.gmail.com</p>
+                            </div>
+                            <div class="information">
+                                <img src="image/ContactUs/telephone.png" class="icon" alt="" />
+                                <p>123-456-789</p>
+                            </div>
                         </div>
-                        <div class="information">
-                            <img src="image/ContactUs/email.png" class="icon" alt="" />
-                            <p>customerservice@thegodzilla.gmail.com</p>
-                        </div>
-                        <div class="information">
-                            <img src="image/ContactUs/telephone.png" class="icon" alt="" />
-                            <p>123-456-789</p>
+
+                        <div class="social-media">
+                            <p style="color:#031824; font-size: 24px; margin-top: 20px; font-weight:bold">Connect with us</p>
+                            <div class="social-icon">
+                                <img src="image/ContactUs/facebook.png" />
+                                <img src="image/ContactUs/twitter.png" />
+                                <img src="image/ContactUs/instagram.png" />
+                                <img src="image/ContactUs/linkedin.png" />
+                            </div>
                         </div>
                     </div>
 
-                    <div class="social-media">
-                        <p style="color:#031824; font-size: 24px; margin-top: 20px; font-weight:bold">Connect with us</p>
-                        <div class="social-icon">
-                            <img src="image/ContactUs/facebook.png" />
-                            <img src="image/ContactUs/twitter.png" />
-                            <img src="image/ContactUs/instagram.png" />
-                            <img src="image/ContactUs/linkedin.png" />
-                        </div>
+                    <div class="contact-form">
+                        <span class="circle one"></span>
+                        <span class="circle two"></span>
+
+                        <form name="contact">
+                            <h3 class="title">Contact Us</h3>
+                            <div class="input-container focus">
+                                <input type="text" name="name" class="input" />
+                                <label for="">Username</label>
+                                <span>Username</span>
+                            </div>
+                            <div class="input-container focus">
+                                <input type="email" name="email" class="input" />
+                                <label for="">Email</label>
+                                <span>Email</span>
+                            </div>
+                            <div class="input-container focus">
+                                <input type="tel" name="phone" class="input" />
+                                <label for="">Phone Number</label>
+                                <span>Phone number</span>
+                            </div>
+                            <div class="input-container textarea focus">
+                                <textarea name="message" class="input"></textarea>
+                                <label for="">Message</label>
+                                <span>Message</span>
+                            </div>
+                            <div class="button">
+                                <input type="button" value="Send" class="btn" onclick="Send()" />
+                                <input type="button" value="Close" class="btn2" id="close" onclick="close_popup()" />
+                            </div>
+                        </form>
                     </div>
-                </div>
-
-                <div class="contact-form">
-                    <span class="circle one"></span>
-                    <span class="circle two"></span>
-
-                    <form>
-                        <h3 class="title">Contact Us</h3>
-                        <div class="input-container focus">
-                            <input type="text" name="name" class="input" />
-                            <label for="">Username</label>
-                            <span>Username</span>
-                        </div>
-                        <div class="input-container focus">
-                            <input type="email" name="email" class="input" />
-                            <label for="">Email</label>
-                            <span>Email</span>
-                        </div>
-                        <div class="input-container focus">
-                            <input type="tel" name="phone" class="input" />
-                            <label for="">Phone Number</label>
-                            <span>Phone number</span>
-                        </div>
-                        <div class="input-container textarea focus">
-                            <textarea name="message" class="input"></textarea>
-                            <label for="">Message</label>
-                            <span>Message</span>
-                        </div>
-                        <div class="button">
-                            <input type="button" value="Send" class="btn" />
-                            <input type="button" value="Close" class="btn2" id="close" onclick="close_popup()" />
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <div class="list">
+        <div class="item">
+            <h4 class="heading">To Receive</h4>
+            <div class="line"></div> 
+            <div class="inf">
+                <div class="inf__img">
+                    <img src="image/customer_Track/1.The-North-Face-Lace-Up-Boots.jpg" >
+                </div>
+                <div class="inf__dec">
+                    <div>
+                        <span class="name">TNF Lace-up Boots</span>
+                        <span class="size">Size 9</span>
+                        <span class="quantity">x 2</span>
+                    </div>
+                    <div class="total-price">TOTAL: 5.400.000VND</div>
+                </div>
+            </div>
+            <div class="button__details">
+                <button class=""><a href="Order Detail.html">Check details</a></button>
+            </div>
+        </div>
+        <div class="item">
+            <h4 class="heading">To Receive</h4>
+            <div class="line"></div> 
+            <div class="inf">
+                <div class="inf__img">
+                    <img src="image/customer_Track/2.Timberland-Trekker-Hiking-Boots.jpg" >
+                </div>
+                <div class="inf__dec">
+                    <div>
+                        <span class="name">TBL Trekker Hiking Boots</span>
+                        <span class="size">Size 9</span>
+                        <span class="quantity">x 2</span>
+                    </div>
+                    <div class="total-price">TOTAL: 2.000.000VND</div>
+                </div>
+            </div>
+            <div class="button__details">
+                <button class="">Check details</button>
+            </div>
+        </div>
+        <div class="item">
+            <h4 class="heading">To Receive</h4>
+            <div class="line"></div> 
+            <div class="inf">
+                <div class="inf__img">
+                    <img src="image/customer_Track/3.1.jpg" >
+                </div>
+                <div class="inf__dec">
+                    <div>
+                        <span class="name">Adidas Sporty Shoes</span>
+                        <span class="size">Size 9</span>
+                        <span class="quantity">x 2</span>
+                    </div>
+                    <div class="total-price">TOTAL: 5.400.000VND</div>
+                </div>
+            </div>
+            <div class="button__details">
+                <button  class="">Check details</button>
+            </div>
+        </div>
+    </div>
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="card1">
             <p class="status">
                 <i>To Receive</i>
             </p>
-            <hr />
+            <hr/>
             <div class="container1">
                 <div>
                     <img src="image/customer_Track/1.The-North-Face-Lace-Up-Boots.jpg" width="100px" height="100px" style=" margin-top:5px" />
@@ -237,7 +299,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!--    footer-->
     <section id="footer">
         <div class="footer-container">

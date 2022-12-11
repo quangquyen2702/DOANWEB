@@ -1,35 +1,94 @@
 body {
     background-color: #F1F5F8;
 }
-
-#FAQ {
-    text-decoration: none;
-    background-color: #EDEDED;
-    color: #031824;
-    border-radius: 10px;
-    padding: 30px 120px;
-    font-weight: bold
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+ 
+.item{
+    width: 50%;
+    padding: 12px 40px;
+    border: 1px solid #031824;
+    box-shadow: 0px 5px 10px #aeadb2;
+    border-radius: 20px;
 }
 
-#Track {
-    text-decoration: none;
+.item .line{
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    margin: 12px 0;
+}
+
+.item .inf{
+    display: flex;
+    gap: 20px;
+}
+
+.item .inf__img{
+    width: 30%;
+}
+
+.item .inf__img img{
+    width: 100%;
+}
+.heading {
+    color: #031824;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.item .inf__dec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    font-size: 16px;
+}
+
+.item .inf__dec div{
+    display: flex;
+    flex-direction: column  ;
+}
+
+.item .inf__dec .name{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.item .inf__dec .size{
+    font-style: italic;
+    color: #AEADB2;
+    margin-bottom: 16px;
+}
+
+.item .inf__dec .total-price{
+    text-align: right;
+    width: 100%;
+    font-weight: bold;
+}
+.button__details{
+    margin-top: 5px;
+    text-align: right;
+}
+
+.button__details button{
+    padding: 6px 12px;
+    color: #fff;
     background-color: #031824;
-    color: #F1F5F8;
-    border-radius: 10px;
-    padding: 30px 120px;
-    font-weight: bold
+    font-size: 18px;
+}
+.button__details button a{
+    color: #fff;
 }
 
-#Contact {
-    text-decoration: none;
-    background-color: #EDEDED;
-    color: #031824;
-    border-radius: 10px;
-    padding: 30px 120px;
-    font-weight: bold
-}
-
-.container {
+/* .container {
     height: auto;
     width: auto;
     padding: 10px 300px;
@@ -54,6 +113,7 @@ body {
 .card1 hr {
     color: #031824;
     width: 500px
+  
 }
 
 .container1 {
@@ -83,43 +143,43 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .pop-up {
     background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 250%;
-    position: absolute;
-    top: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
 }
 
 .container-popup {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	max-width: 800px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .form {
-    max-width: 60%;
-    max-height: 450px;
-    background-color: #EDEDED;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px #AEADB2;
-    z-index: 1000;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+	max-height: 450px;
+	background-color: #ededed;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px #aeadb2;
+	z-index: 1000;
+	display: flex;
 }
 
 .contact-form {
     background-color: #031824;
-    position: relative;
+	position: relative;
+	width: 50%;
 }
 
 .circle {
@@ -143,14 +203,11 @@ body {
 }
 
 .contact-form:before {
-    content: "";
     position: absolute;
-    width: 26px;
-    height: 26px;
-    background-color: #031824;
-    transform: rotate(45deg);
-    top: 50px;
-    left: -13px
+	background-color: #031824;
+	transform: rotate(45deg);
+	top: 50px;
+	left: -13px;
 }
 
 form {
@@ -208,7 +265,7 @@ textarea.input {
     transform: translateY(0)
 }
 
-.button {
+/* .button {
     display: flex;
     margin-left: -20px;
     text-align: center
@@ -238,7 +295,7 @@ textarea.input {
     margin-left: 110px;
     margin-bottom: 50px;
     cursor: pointer
-}
+} */
 
 .input-container span {
     position: absolute;
@@ -282,7 +339,8 @@ textarea.input {
 
 .contact-info {
     position: relative;
-    padding: 20% 5%;
+	padding: 10% 5%;
+	width: 50%;
 }
 
 .contact-info .title {
@@ -307,6 +365,43 @@ textarea.input {
     margin-right: 10px
 }
 
+.row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	padding: 0 12px;
+}
+
+.row a {
+	text-decoration: none;
+	width: 30%;
+	border-radius: 10px;
+	height: 60px;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 12px;
+}
+#FAQ {
+    background-color: #EDEDED;
+    color: #031824;
+}
+
+#Track {
+    background-color: #031824;
+    color: #F1F5F8;
+    border-radius: 10px;
+    font-weight: bold
+}
+
+#Contact {
+    background-color: #EDEDED;
+    color: #031824;
+}
+
+
 
 /* .social-media {
      display: flex;
@@ -321,4 +416,76 @@ textarea.input {
 .social-icon img {
     text-align: center;
     margin-right: 30px
+}
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+	.row a:nth-child(1) {
+		width: 100%;
+		/* padding: 0; */
+	}
+
+	.row a:nth-child(2),
+	.row a:nth-child(3) {
+		width: 45%;
+	}
+    
+}
+
+
+@media screen and (max-width: 820px) {
+	.pop-up {
+		top: -350px;
+	}
+	.form {
+		flex-direction: column;
+	}
+	.contact-info,
+	.contact-form {
+		width: 100%;
+	}
+	.contact-info {
+		padding: 10px;
+	
+    }
+    .social-icon img{
+        width: 30px;
+        height: 30px;
+    }
+    .item .inf{
+        flex-direction: column;
+    }
+
+    .item .inf__img{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .item .inf__img img{
+        width: 70%;
+    }
+
+    .item .inf__dec{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 16px;
+    }
+    .item .inf__dec .name{
+        
+    }
+    
+    .item .inf__dec .size{
+        font-style: italic;
+        color: #AEADB2;
+    }
+    .item .inf {
+        display: flex;
+        gap: 5px;
+    }
+    
 }
