@@ -1,46 +1,46 @@
 <cus-list>
 <customer> 
 	<id>120312</id> 
-	<name>Dam Van Thang</name>
+	<name>Chau Vo Van Dao</name>
 	<phone>0945789645</phone> 
-	<address>An Khe, Gia Lai</address> 
-	<gmail>onlypede@gmail.com</gmail> 
+	<address>Thang Binh, Quang Nam</address> 
+	<gmail>daocvv@gmail.com</gmail> 
 	<total>$500</total> 
 </customer>
 
 <customer> 
 	<id>120532</id> 
-	<name>Dong Uyen</name>
+	<name>Quang Quyen</name>
 	<phone>032456458</phone> 
-	<address>Ba Ria, Vung Tau</address> 
-	<gmail>dorisdong@gmail.com</gmail> 
+	<address>Tam Ky, Quang Nam</address> 
+	<gmail>quyen123@gmail.com</gmail> 
 	<total>$700</total> 
 </customer>
 
 <customer> 
 	<id>120672</id> 
-	<name>Adam Smith</name>
+	<name>Gia Han</name>
 	<phone>015678941</phone> 
-	<address>Tam Ky, Quang Nam</address> 
-	<gmail>congngu@gmail.com</gmail> 
+	<address>Mo Duc, Quang Ngai</address> 
+	<gmail>hangia@gmail.com</gmail> 
 	<total>$450</total> 
 </customer>
 
 <customer> 
 	<id>123587</id> 
-	<name>Pham Thi Thu</name>
+	<name>Ngo Thi Bin</name>
 	<phone>097512464</phone> 
-	<address>District 12, HCM</address> 
-	<gmail>thoconbado@gmail.com</gmail> 
+	<address>Quan 12, HCM</address> 
+	<gmail>binngu@gmail.com</gmail> 
 	<total>$800</total> 
 </customer>
 
 <customer> 
 	<id>124758</id> 
-	<name>Lo Uu Luu</name>
+	<name>Pham Tuan An</name>
 	<phone>0945759984</phone> 
-	<address>Hoi An, Quang Nam</address> 
-	<gmail>stephanie@gmail.com</gmail> 
+	<address>Pleiku, Gia Lai</address> 
+	<gmail>anpt@gmail.com</gmail> 
 	<total>$980</total> 
 </customer>
 </cus-list>

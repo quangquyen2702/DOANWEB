@@ -16,7 +16,7 @@ li {
 }
 
 .btn {
-    background: #031824;
+    background: #4380a3;
     color: #F1F5F8;
     padding: 10px 10px;
     text-align: center
@@ -24,9 +24,9 @@ li {
 
 .btn:hover {
     background: #c2bebe;
-    color: #031824;
+    color: #4380a3;
     padding: 3px 8px;
-    border: 2px solid #031824;
+    border: 2px solid #4380a3;
 }
 
 .title {
@@ -34,12 +34,12 @@ li {
     align-items: center;
     justify-content: space-around;
     padding: 15px 10px;
-    border-bottom: 1px solid #031824
+    border-bottom: 1px solid #4380a3;
 }
 
 .side-menu {
     position: fixed;
-    background: #031824;
+    background: #4380a3;
     display: flex;
     flex-direction: column;
 }
@@ -62,12 +62,12 @@ li {
 
 .side-menu li:hover {
     background: #F1F5F8;
-    color: #031824;
+    color: #4380a3;
     width: 100%;
 }
 
 .side-menu li:hover a {
-    color: #031824;
+    color: #4380a3;
     width: 100%;
 }
 

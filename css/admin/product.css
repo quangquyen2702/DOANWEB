@@ -14,7 +14,7 @@ body {
 
 .btn {
     margin: 0px 2%;
-    background: #031824;
+    background: #4380a3;
     color: #F1F5F8;
     padding: 10px 10px;
     text-align: center
@@ -22,7 +22,7 @@ body {
 
 .btn:hover {
     background: white;
-    color: #031824;
+    color: #4380a3;
     transition: 0.5s;
 }
 
@@ -81,7 +81,7 @@ td {
 .sort {
     text-align: right;
     display: block;
-    color: #031824;
+    color: #4380a3;
     font-weight: bold;
     margin: 10px 2%;
 }
