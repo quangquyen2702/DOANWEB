@@ -5,6 +5,7 @@ body {
     text-align: center;
     color: #031824;
     font-family: sans-serif;
+    margin-top: 200px;
   }
   
   .tab {
@@ -387,3 +388,4 @@ textarea.input {
     justify-content: center;
     align-items: center;
   }
+  

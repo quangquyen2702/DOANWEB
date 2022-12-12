@@ -803,7 +803,7 @@ ul.dropdown_menu>li:hover>ul.submenu {
 }
 /* Tablet */
 
-@media screen and (min-width:600px) and (max-width:1100px) {
+@media screen and (min-width:740px) and (max-width:1100px) {
     .navigation {
         display: flex;
         flex-wrap: wrap;
@@ -811,9 +811,10 @@ ul.dropdown_menu>li:hover>ul.submenu {
         justify-content: center;
         position: fixed;
         left: 0px;
+        right: 0px;
         top: 0px;
+        bottom: 100px;
         width: 100%;
-        height: 20%;
         background-color: whitesmoke;
         z-index: 10;
     }
@@ -913,8 +914,121 @@ ul.dropdown_menu>li:hover>ul.submenu {
     .welcome {
         display: flex;
     }
+}
     @media screen and (max-width: 740px) 
 {
+   
+    .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 100px;
+        width: 100%;
+        background-color: whitesmoke;
+        z-index: 10;
+    }
+    .navigation .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navigation .logo button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    } 
+    .logo img {
+        max-width: 50%;
+        max-height: 100px;
+        align-items: center;
+    }
+    .navigation.logo:hover button {
+        transform: scale(2);
+        transition: all ease 0.3s;
+        box-shadow: 1px 1px 10px #ddd;
+    }
+    .contain-menu {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* padding: 0px 10px 0px 0px; */
+    }
+    .nav-mobile {
+        width: 100%;
+        display: block;
+        color: #031824;
+        padding: 0px 20px;
+        font-size: large;
+        font-size: 20px;
+    }
+    #menu {
+        list-style: none;
+        display: none;
+        flex-direction: column;
+        margin-top: 90%;
+    }
+    #menu li {
+        width: 100%;
+        color: white;
+        background-color: #031824;
+    }
+    #menu li a {
+        text-decoration: none;
+        font-size: 15px;
+        padding: 20px;
+        color: white;
+        opacity: 0.8;
+        padding: 10px 20px 10px 20px;
+    }
+    #menu li:hover a {
+        opacity: 1;
+        transition: all ease 0.3s;
+        font-weight: 600
+    }
+    #menu>li>ul.dropdown_menu {
+        list-style: none;
+        display: none;
+        width: 100%;
+    }
+    #menu>li:hover>ul.dropdown_menu {
+        display: block;
+        margin-left: 100%;
+        margin-top: -20%;
+    }
+    .right-elements {
+        width: 60%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .right-elements a {
+        margin: 0px 10px;
+    }
+    .right-elements a i {
+        color: #2c2c2c;
+    }
+    .right-elements a:hover i {
+        color: orangered;
+        transition: all ease 0.2s;
+    }
+    #show-signin {
+        border: none;
+    }
+    marquee {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .welcome {
+        display: flex;
+    }
     .footer-logo-container 
     {
   
@@ -943,21 +1057,51 @@ ul.dropdown_menu>li:hover>ul.submenu {
     {
         width: 300px;
     }
-  
+    #footer
+    {
+        width: 108%
+        
+    }
+  #best-selling.best-selling-list
+  {
+    display: none;
+  }
 }
 @media screen and (min-width: 740px) and (max-width: 1024px) 
 {
+    .slides
+    {
+        margin-top: 10px;
+    }
     .footer-email-form {
         width: 60%;
     }
     #footer-email-btn {
         width: 100px;
         max-width: 100%;
+        margin-top: 10px;
       }
       #footer-email {
         width: 200px;
         max-width: 100%;
       }
+      #footer
+      {
+        width: 105%;
+      }
+      .right-elements
+      {
+        margin-right: 10%;
+      }
+      .footer-logo-container
+      {
+        width: 60%;
+      }
+      .footer-menu-box
+      {
+        width: 50%;
+      }
+     
    
-}
+
 }

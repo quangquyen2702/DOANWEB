@@ -13,63 +13,64 @@
 
 <body>
        <!--    navigationbar-->
-    <nav class="navigation">
-       <!--        Logo-->
-        <div class="logo">
-           <button type="button" onclick="LinkHomepage()">
-              <img src="image/homepage/logo.png" style="width: 100%; height:100% " >
-           </button>
-       </div>
+       <nav class="navigation">
+        <!--        Logo-->
+         <div class="logo">
+            <button type="button" onclick="LinkHomepage()">
+               <img src="image/homepage/logo.png" style="width: 100%; height:100% " >
+            </button>
+        </div>
+ 
+        <!--        menu-->
+        <div class="contain-menu">
+            <div class="nav-mobile" onclick="OpenMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li>
+                    <a href="Homepage.html" class="active1">HOME</a></li>
+                </li>
+                <li>
+                    <a href="AllProduct.html">PRODUCT CATEGORY</a>
+                    </a>
+                    <ul class="dropdown_menu">
+                        <li>
+                            <ul class="submenu">
+                                <li><a href="AllProduct.html">HIGH TOPS</a></li>
+                                <li><a href="AllProduct.html">LOW TOPS</a></li>
+                                <li><a href="AllProduct.html">SLIP ON</a></li>
+                            </ul>
+                            <a href="AllProduct.html">TYPE</a>
+                        </li>
+                        <li>
+                            <ul class="submenu">
+                                <li><a href="AllProduct.html">MEN</a></li>
+                                <li><a href="AllProduct.html">WOMEN</a></li>
+                                <li><a href="AllProduct.html">KID</a></li>
+                            </ul>
+                            <a href="AllProduct.html">SEX</a>
+                        </li>
+                        <li>
+                            <ul class="submenu">
+                                <li><a href="AllProduct.html">NIKE</a></li>
+                                <li><a href="AllProduct.html">ADIDAS</a></li>
+                                <li><a href="AllProduct.html">SUPREME</a></li>
+                                <li><a href="AllProduct.html">CONVERSE</a></li>
+                                <li><a href="AllProduct.html">TIMBERLAND</a></li>
+                                <li><a href="AllProduct.html">THENORTHFACE</a></li>
+                            </ul>
+                            <a href="AllProduct.html">BRAND</a>
+                        </li>
+                        <li><a href="AllProduct.html">LAST ITEM</a></li>
+                        <li><a href="AllProduct.html">SPORT</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html">NEWS</a></li>
+                <li><a href="Customer Service_FAQ.html">CUSTOMER SERVICE</a></li>
+                <li><a href="About-us.html" >ABOUT US</a></li>
+            </ul>
+        </div>
 
-       <!--        menu-->
-       <div class="contain-menu">
-           <div class="nav-mobile" onclick="OpenMenu()">
-               <i class="fas fa-bars"></i>
-           </div>
-           <ul id="menu">
-               <li>
-                   <a href="Homepage.html" >HOME</a></li>
-               </li>
-               <li>
-                   <a href="AllProduct.html" class="active">PRODUCT CATEGORY</a>
-                   </a>
-                   <ul class="dropdown_menu">
-                       <li>
-                           <ul class="submenu">
-                               <li><a href="AllProduct.html">HIGH TOPS</a></li>
-                               <li><a href="AllProduct.html">LOW TOPS</a></li>
-                               <li><a href="AllProduct.html">SLIP ON</a></li>
-                           </ul>
-                           <a href="AllProduct.html">TYPE</a>
-                       </li>
-                       <li>
-                           <ul class="submenu">
-                               <li><a href="AllProduct.html">MEN</a></li>
-                               <li><a href="AllProduct.html">WOMEN</a></li>
-                               <li><a href="AllProduct.html">KID</a></li>
-                           </ul>
-                           <a href="AllProduct.html">SEX</a>
-                       </li>
-                       <li>
-                           <ul class="submenu">
-                               <li><a href="AllProduct.html">NIKE</a></li>
-                               <li><a href="AllProduct.html">ADIDAS</a></li>
-                               <li><a href="AllProduct.html">SUPREME</a></li>
-                               <li><a href="AllProduct.html">CONVERSE</a></li>
-                               <li><a href="AllProduct.html">TIMBERLAND</a></li>
-                               <li><a href="AllProduct.html">THENORTHFACE</a></li>
-                           </ul>
-                           <a href="AllProduct.html">BRAND</a>
-                       </li>
-                       <li><a href="AllProduct.html">LAST ITEM</a></li>
-                       <li><a href="AllProduct.html">SPORT</a></li>
-                   </ul>
-               </li>
-               <li><a href="news.html">NEWS</a></li>
-               <li><a href="Customer Service_FAQ.html">CUSTOMER SERVICE</a></li>
-               <li><a href="About-us.html" >ABOUT US</a></li>
-           </ul>
-       </div>
         <!--        right-->
         <div class="right-elements">
             <!--        search-->
@@ -80,7 +81,12 @@
                 <i class="fa fa-shopping-bag"></i></a>
             <!--        user-->
             <a href="#" class="user">
-                <i class="fa fa-user"></i></a>
+                <button type="button" id="show-signin">
+                    <i class="fa fa-user" style="font-size: 16px">
+                    </i>
+                </button>
+            </a>
+
         </div>
     </nav>
 
