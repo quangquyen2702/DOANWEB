@@ -15,7 +15,7 @@ function OpenMenu() {
   }
   
   function LinkHomepage() {
-    window.open("homepage.html", "_self");
+    window.open("index.html", "_self");
   }
   /*===pop up sign in==*/
   document.querySelector("#show-signin").addEventListener("click", function () {
