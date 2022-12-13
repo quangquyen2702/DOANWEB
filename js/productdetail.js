@@ -24,5 +24,5 @@ $(document).ready(function() {
 });
 
 function OpenCart() {
-    window.open("cart.html", "_self");
+    window.open("Cart.html", "_self");
 }
