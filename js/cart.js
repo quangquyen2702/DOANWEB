@@ -1,5 +1,5 @@
 function openHomepage() {
-    window.open("homepage.html", "_self");
+    window.open("index.html", "_self");
 }
 
 function openCheckout() {
